@@ -1,7 +1,7 @@
 package pw;
 
 public interface variables {
-	public interface Variables {
+	
 		// resources available to create the first enemy fleet
 		public final int DEUTERIUM_BASE_ENEMY_ARMY = 26000;
 		public final int METAL_BASE_ENEMY_ARMY = 180000;
@@ -102,4 +102,4 @@ public interface variables {
 		// percentage of waste that will be generated with respect to the cost of the units
 		public final int PERCENTATGE_WASTE = 70;
 }
-	}
+	

@@ -5,6 +5,6 @@ public class resourceException extends Exception {
         super(message);
     }
     public resourceException() {
-        System.out.println("mensaje aun no creado");
+        System.out.println("Ha saltado una resourceException");
     }
 }

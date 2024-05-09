@@ -22,6 +22,9 @@ public class planet {
 		this.upgradeDefenseTechnologyDeuteriumCost = upgradeDefenseTechnologyDeuteriumCost;
 		this.upgradeAttackTechnologyDeuteriumCost = upgradeAttackTechnologyDeuteriumCost;
 		this.army = army;
+		/*for (int i = 0; i < 7; i++) {
+            this.army[i] = new ArrayList<militaryUnit>();
+        }*/
 	}
 
 	public int getTechnologyDefense() {
@@ -80,12 +83,29 @@ public class planet {
 		this.army = army;
 	}
 	
-	public void upgradeTechnologyDefense() {
+	public void upgradeTechnologyDefense() throws resourceException {
+		int currentCost = upgradeDefenseTechnologyDeuteriumCost;
+		if (deuterium >= currentCost) {
+			technologyDefense++;
+			deuterium -= currentCost;
+			upgradeDefenseTechnologyDeuteriumCost *= 1.5; 
+	    } else {
+	        throw new resourceException("No hay suficiente deuterio para actualizar la tecnología de defensa");
+	    }
+	}
+		
+    
 
-    }
-
-    public void upgradeTechnologyAttack() {
-
+    public void upgradeTechnologyAttack() throws resourceException {
+        int currentCost = upgradeAttackTechnologyDeuteriumCost;
+        if (deuterium >= currentCost) {
+            technologyAtack++;
+            deuterium -= currentCost;
+            // Aumentar el costo para la próxima actualización
+            upgradeAttackTechnologyDeuteriumCost *= 1.5; // Incremento del 10%
+        } else {
+            throw new resourceException("No hay suficiente deuterio para actualizar la tecnología de ataque");
+        }
     }
 
     public void newLigthHunter(int n) {

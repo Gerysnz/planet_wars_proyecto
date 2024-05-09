@@ -1,6 +1,16 @@
 package pw;
 
-public class defense implements militaryUnit{
+public abstract class defense implements militaryUnit, variables{
+	private int armor;
+	private int initialArmor;
+	private int baseDamage;
+	
+
+	public defense(int armor, int baseDamage) {
+		super();
+		this.armor = armor;
+		this.baseDamage = baseDamage;
+	}
 
 	@Override
 	public int attack() {
