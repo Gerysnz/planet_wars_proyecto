@@ -4,6 +4,7 @@ public abstract interface militaryUnit {
 	  // Método abstracto que devuelve el poder de ataque de la nave
     public abstract int attack();
     
+    
     // Método abstracto que reduce el blindaje de la nave según el daño recibido
     public abstract void takeDamage(int receivedDamage);
     

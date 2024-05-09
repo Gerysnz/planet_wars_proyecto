@@ -108,23 +108,23 @@ public class planet {
         }
     }
 
-    public void newLigthHunter(int n) {
+    public void newLigthHunter(int n) throws resourceException {
 
     }
 
-    public void newHeavyHunter(int n) {
+    public void newHeavyHunter(int n) throws resourceException {
 
     }
 
-    public void newBattleShip(int n) {
+    public void newBattleShip(int n) throws resourceException{
 
     }
 
-    public void newArmoredShip(int n) {
+    public void newArmoredShip(int n) throws resourceException{
 
     }
 
-    public void newMissileLauncher(int n) {
+    public void newMissileLauncher(int n) throws resourceException{
 
     }
 
