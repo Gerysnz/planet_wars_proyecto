@@ -1,0 +1,41 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif; /* Fuente predeterminada */
+  margin: 0; /* Eliminar márgenes */
+  padding: 0; /* Eliminar relleno */
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: #cf7e7e; /* Color de fondo del encabezado */
+  padding: 10px 0; /* Relleno superior e inferior */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  background-color: #ffffff; /* Color de fondo de la barra de navegación */
+  border-bottom: 1px solid #dddddd; /* Borde inferior */
+  display: flex; /* Utilizar flexbox */
+  justify-content: space-between; /* Distribuir elementos de manera uniforme */
+  align-items: center; /* Alinear verticalmente al centro */
+}
+
+.navbar-brand img {
+  max-height: 40px; /* Altura máxima del logo */
+  width: auto; /* Ancho automático para mantener la proporción */
+}
+
+.navbar-collapse {
+  display: flex; /* Utilizar flexbox */
+  justify-content: flex-end; /* Alinear a la derecha */
+}
+
+.navbar-collapse .nav-link {
+  margin-left: 20px; /* Espacio entre enlaces */
+  color: #333333; /* Color del texto de los enlaces */
+}
+
+.navbar-collapse .nav-link:hover {
+  color: #007bff; /* Color del texto de los enlaces al pasar el cursor */
+}
