@@ -37,10 +37,16 @@ header {
 
 }
 
-.navbar-brand img { /* AJUSTES LOGO*/
+.navbar-brand {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+}
+
+.navbar-brand img {
   max-height: 50px;
   width: auto;
 }
+
 .navbar-collapse {
   display: flex;
   justify-content: center; 
@@ -51,20 +57,20 @@ header {
   margin-right: 10px;
 }
 
-.opcionesMENU  {
+.opcionesMENU {
   letter-spacing: 0;
   color: #fff;
   border: none;
   padding: 5px 10px;
 }
 
-.opcionesMENU :hover,
-.opcionesMENU :active {
+.opcionesMENU:hover,
+.opcionesMENU:active {
   letter-spacing: 2px;
 }
 
-.opcionesMENU :after,
-.opcionesMENU :before {
+.opcionesMENU:after,
+.opcionesMENU:before {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border: none; /* Quita el borde */
@@ -78,8 +84,8 @@ header {
   width: 0;
 }
 
-.opcionesMENU :hover:after,
-.opcionesMENU :hover:before {
+.opcionesMENU:hover:after,
+.opcionesMENU:hover:before {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-color: #fff;
@@ -88,7 +94,7 @@ header {
   width: 70%;
 }
 
-.opcionesMENU :hover:before {
+.opcionesMENU:hover:before {
   bottom: auto;
   top: 0;
   width: 70%;
