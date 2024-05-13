@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-  background-image: url(/M4/WEB_PLANET_WARS/fondo_pag.png);
+  background-image: url(imgs/fondo_pag.png);
   background-size: cover;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -8,78 +8,114 @@ body {
 }
 
 /* Estilos para dispositivos móviles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   body {
-    background-color: rgba(100, 100, 173, 0.445) !important;
-    background-image: none;
+    background-image: url(imgs/fondo_pag.png) !important;
+    background-size: auto;
+    background-repeat: no-repeat;
+    padding: 20px;
   }
 }
 
-/* Estilos para el encabezado */
+/* ENCABEZADO */
 header {
-  background-color: #000000; /* Color de fondo del encabezado */
+  background-color: #000000;
   position: sticky;
   width: 100%;
   top: 0%;
+  
 }
 
-/* Estilos para la barra de navegación */
+/* AJUSTES BARRA DE NAVEGACIÓN */
 .navbar {
-  background-color: #000000; /* Ruta de la imagen de fondo */
-  background-size: auto; /* Ajustar la imagen de fondo al tamaño del encabezado */
-  display: flex; /* Utilizar flexbox */
-  justify-content: space-between; /* Distribuir elementos de manera uniforme */
-  align-items: center; /* Alinear verticalmente al centro */
-  padding: 0 15px; /* Agregar espacio alrededor de los elementos */
+  background-color: #000000;
+  background-size: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+
 }
 
-.navbar-brand img {
-  max-height: 50px; /* Altura máxima del logo */
-  width: auto; /* Ancho automático para mantener la proporción */
+.navbar-brand img { /* AJUSTES LOGO*/
+  max-height: 50px;
+  width: auto;
 }
-
 .navbar-collapse {
-  display: flex; /* Utilizar flexbox */
-  justify-content: center; /* Alinear al centro */
-}
-
-.navbar-collapse .nav-link {
-  margin-left: 20px; /* Espacio entre enlaces */
-  color: #ffffff; /* Color del texto de los enlaces */
-}
-
-.navbar-collapse .nav-link:hover {
-  color: #007bff; /* Color del texto de los enlaces al pasar el cursor */
+  display: flex;
+  justify-content: center; 
 }
 
 .navbar-nav .nav-item {
-  display: inline-block; /* Mostrar elementos uno al lado del otro */
+  display: inline-block; /* Alinea el menú */
+  margin-right: 10px;
 }
+
+.opcionesMENU  {
+  letter-spacing: 0;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+}
+
+.opcionesMENU :hover,
+.opcionesMENU :active {
+  letter-spacing: 2px;
+}
+
+.opcionesMENU :after,
+.opcionesMENU :before {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: none; /* Quita el borde */
+  bottom: 2px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: all 280ms ease-in-out;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.opcionesMENU :hover:after,
+.opcionesMENU :hover:before {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-color: #fff;
+  -webkit-transition: width 350ms ease-in-out;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+.opcionesMENU :hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}
+
 
 main {
   padding-top: 10px;
   padding: 2%;
+
 }
 
+/* TITULO  PRINCIPAL */
 .titulo {
-  text-align: center; /* Centra el título */
-  padding-bottom: 50%;
+  text-align: center; 
+  padding-bottom: 30%;
+  padding-top: 1%;
 }
 
 .titulo h2 {
-  font-size: 7em; /* Tamaño del título más grande que h1 */
-  padding-top: 5%;
+  font-size: 7em;
+  padding-top: 9%;
   margin-bottom: 0;
-  
 }
 
-.titulo button {
-  background-color: rgba(196, 218, 243, 0.925);
-  padding: 1%;
-
-}
-
-.btnfos {
+/* BOTON DOWNLOAD */
+.botonDOWNLOAD {
   color: #fff;
   cursor: pointer;
   display: block;
@@ -91,11 +127,9 @@ main {
   position: relative;
   text-transform: uppercase;
   width: 100%;
-  
 }
 
-
-.btnfos-5 {
+.botonDOWNLOAD {
   border: 0 solid;
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
   outline: 1px solid;
@@ -108,7 +142,7 @@ main {
   outline-offset: 0px;
 }
 
-.btnfos-5:hover {
+.botonDOWNLOAD:hover {
   border: 1px solid;
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
   outline-offset: 15px;
@@ -116,18 +150,15 @@ main {
   text-shadow: 1px 1px 2px #427388;
 }
 
-.section-container {
-  position: relative; /* Cambiado a 'relative' para que no se superponga a la barra de navegación */
-  background-color: white; /* Fondo blanco */
-  border-radius: 20px; /* Bordes curvos */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para simular bordes ondulados */
-  padding: 0.5px;
-  z-index: -1; /* Cambiado a '1' para que esté detrás de la barra de navegación */
-}
 
-.texto-izquierda {
-  flex: 1; /* Ocupa todo el espacio disponible */
-  text-align: left; /* Alinea el texto a la izquierda */
+/* RECUADRO CON FONDO BLANCO */
+.section-container {
+  position: relative; 
+  background-color: white; 
+  border-radius: 20px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  padding: 0.5px;
+  z-index: -1; 
 }
 
 canvas {
@@ -136,17 +167,19 @@ canvas {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Coloca el canvas detrás del contenido */
+  z-index: -1; 
 }
 
+/* SEGUNDO TITULO (IMAGENES) */
 h2 {
   text-align: center;
   color: aliceblue;
 }
 
+/* AJUSTE PARA CONTENEDORES IMG */
 .imagenes-section {
-  background-color: #f0f0f0; /* Color de fondo para la sección de imágenes */
-  padding: 20px 0; /* Espaciado interno superior e inferior */
+  background-color: #f0f0f0;
+  padding: 20px 0;
 }
 
 .imagenes-container {
@@ -165,7 +198,7 @@ h2 {
 
 
 
-
+/* PIE DE PAG */
 footer {
   background-color: #000000;
   color: #ffffff; /* Cambia el color del texto a blanco */
@@ -174,6 +207,3 @@ footer {
 }
 
 
-@media screen and (max-width: 768px) {
-  /* Aquí puedes agregar estilos CSS específicos para dispositivos móviles */
-}
