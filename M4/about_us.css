@@ -1,0 +1,55 @@
+/* Estilos generales */
+body {
+  background-image: url(/M4/WEB_PLANET_WARS/fondo_pag.png);
+  font-family: Arial, sans-serif; /* Fuente predeterminada */
+  margin: 0; /* Eliminar márgenes */
+  padding: 0; /* Eliminar relleno */
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: #000000; /* Color de fondo del encabezado */
+  position: sticky;
+  width: 100%;
+  top: 0%;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  background-image: url('/M4/WEB_PLANET_WARS/fondo_pag.png'); /* Ruta de la imagen de fondo */
+  background-size: auto; /* Ajustar la imagen de fondo al tamaño del encabezado */
+  display: flex; /* Utilizar flexbox */
+  justify-content: space-between; /* Distribuir elementos de manera uniforme */
+  align-items: center; /* Alinear verticalmente al centro */
+  padding: 0 15px; /* Agregar espacio alrededor de los elementos */
+}
+
+.navbar-brand img {
+  max-height: 50px; /* Altura máxima del logo */
+  width: auto; /* Ancho automático para mantener la proporción */
+}
+
+.navbar-collapse {
+  display: flex; /* Utilizar flexbox */
+  justify-content: center; /* Alinear al centro */
+}
+
+.navbar-collapse .nav-link {
+  margin-left: 20px; /* Espacio entre enlaces */
+  color: #ffffff; /* Color del texto de los enlaces */
+}
+
+.navbar-collapse .nav-link:hover {
+  color: #007bff; /* Color del texto de los enlaces al pasar el cursor */
+}
+
+.navbar-nav .nav-item {
+  display: inline-block; /* Mostrar elementos uno al lado del otro */
+}
+
+footer {
+  background-color: #000000;
+  color: #ffffff; /* Cambia el color del texto a blanco */
+  padding: 20px; /* Añade un espacio alrededor del contenido del footer */
+  text-align: center;
+}
