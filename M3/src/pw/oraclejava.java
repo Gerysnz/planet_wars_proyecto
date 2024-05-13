@@ -1,45 +1,56 @@
 package pw;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 
 public class oraclejava {
-	public static void main(String[] args)throws Exception{
 
-        //load the JDBC Driver
+    public static void main(String[] args) {
+        Connection conn = null;
+        Statement stmt = null;
+        ResultSet rs = null;
 
-        //11 
+        try {
+            // Establecer conexión
+            conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "sys as sysdba", "P@ssw0rd");
+            if (conn != null) {
+                System.out.println("Conexión exitosa a la base de datos Oracle!");
 
-        //Connection Obj
+                // Crear una tabla
+                stmt = conn.createStatement();
+                String createTableSQL = "CREATE TABLE ejemplo (id INT PRIMARY KEY, nombre VARCHAR(50))";
+                stmt.executeUpdate(createTableSQL);
+                System.out.println("Tabla creada correctamente.");
 
-        Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","planetwars","planetwarss");
+                // Insertar datos de ejemplo
+                stmt.executeUpdate("INSERT INTO ejemplo VALUES (1, 'Ejemplo 1')");
+                stmt.executeUpdate("INSERT INTO ejemplo VALUES (2, 'Ejemplo 2')");
+                System.out.println("Datos insertados correctamente.");
 
-        //JDBC Obj fro Statement
-
-        Statement st = con.createStatement();
-
-        //write the query
-
-        String query = "select * from emp60";
-
-        //create JDBC ResultSet obj
-
-        ResultSet rs = st.executeQuery(query);
-
-        while(rs.next()){
-
-            System.out.println(rs.getInt(1)+" "+rs.getString(2));
-
+                // Consulta sencilla para verificar los datos insertados
+                rs = stmt.executeQuery("SELECT * FROM ejemplo");
+                System.out.println("ID\tNombre");
+                while (rs.next()) {
+                    int id = rs.getInt("id");
+                    String nombre = rs.getString("nombre");
+                    System.out.println(id + "\t" + nombre);
+                }
+            } else {
+                System.out.println("Fallo al conectar a la base de datos!");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // Cerrar recursos
+            try {
+                if (rs != null) rs.close();
+                if (stmt != null) stmt.close();
+                if (conn != null) conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
+    }}
 
-        rs.close();
-
-        st.close();
-
-        con.close();
-
-    }
-
-}
