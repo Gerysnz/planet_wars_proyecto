@@ -1,41 +1,179 @@
 /* Estilos generales */
 body {
-  font-family: Arial, sans-serif; /* Fuente predeterminada */
-  margin: 0; /* Eliminar márgenes */
-  padding: 0; /* Eliminar relleno */
+  background-image: url(/M4/WEB_PLANET_WARS/fondo_pag.png);
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  body {
+    background-color: rgba(100, 100, 173, 0.445) !important;
+    background-image: none;
+  }
 }
 
 /* Estilos para el encabezado */
 header {
-  background-color: #cf7e7e; /* Color de fondo del encabezado */
-  padding: 10px 0; /* Relleno superior e inferior */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  background-color: #000000; /* Color de fondo del encabezado */
+  position: sticky;
+  width: 100%;
+  top: 0%;
 }
 
 /* Estilos para la barra de navegación */
 .navbar {
-  background-color: #ffffff; /* Color de fondo de la barra de navegación */
-  border-bottom: 1px solid #dddddd; /* Borde inferior */
+  background-color: #000000; /* Ruta de la imagen de fondo */
+  background-size: auto; /* Ajustar la imagen de fondo al tamaño del encabezado */
   display: flex; /* Utilizar flexbox */
   justify-content: space-between; /* Distribuir elementos de manera uniforme */
   align-items: center; /* Alinear verticalmente al centro */
+  padding: 0 15px; /* Agregar espacio alrededor de los elementos */
 }
 
 .navbar-brand img {
-  max-height: 40px; /* Altura máxima del logo */
+  max-height: 50px; /* Altura máxima del logo */
   width: auto; /* Ancho automático para mantener la proporción */
 }
 
 .navbar-collapse {
   display: flex; /* Utilizar flexbox */
-  justify-content: flex-end; /* Alinear a la derecha */
+  justify-content: center; /* Alinear al centro */
 }
 
 .navbar-collapse .nav-link {
   margin-left: 20px; /* Espacio entre enlaces */
-  color: #333333; /* Color del texto de los enlaces */
+  color: #ffffff; /* Color del texto de los enlaces */
 }
 
 .navbar-collapse .nav-link:hover {
   color: #007bff; /* Color del texto de los enlaces al pasar el cursor */
+}
+
+.navbar-nav .nav-item {
+  display: inline-block; /* Mostrar elementos uno al lado del otro */
+}
+
+main {
+  padding-top: 10px;
+  padding: 2%;
+}
+
+.titulo {
+  text-align: center; /* Centra el título */
+  padding-bottom: 50%;
+}
+
+.titulo h2 {
+  font-size: 7em; /* Tamaño del título más grande que h1 */
+  padding-top: 5%;
+  margin-bottom: 0;
+  
+}
+
+.titulo button {
+  background-color: rgba(196, 218, 243, 0.925);
+  padding: 1%;
+
+}
+
+.btnfos {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 160px;
+  margin: 0 auto 2em;
+  position: relative;
+  text-transform: uppercase;
+  width: 100%;
+  
+}
+
+
+.btnfos-5 {
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(133, 158, 241, 0.945);
+  outline-offset: 0px;
+  text-shadow: none;
+  -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+          transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  outline-color: rgba(255, 255, 255, 0.5);
+  outline-offset: 0px;
+}
+
+.btnfos-5:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+  outline-offset: 15px;
+  outline-color: rgba(255, 255, 255, 0);
+  text-shadow: 1px 1px 2px #427388;
+}
+
+.section-container {
+  position: relative; /* Cambiado a 'relative' para que no se superponga a la barra de navegación */
+  background-color: white; /* Fondo blanco */
+  border-radius: 20px; /* Bordes curvos */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para simular bordes ondulados */
+  padding: 0.5px;
+  z-index: -1; /* Cambiado a '1' para que esté detrás de la barra de navegación */
+}
+
+.texto-izquierda {
+  flex: 1; /* Ocupa todo el espacio disponible */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Coloca el canvas detrás del contenido */
+}
+
+h2 {
+  text-align: center;
+  color: aliceblue;
+}
+
+.imagenes-section {
+  background-color: #f0f0f0; /* Color de fondo para la sección de imágenes */
+  padding: 20px 0; /* Espaciado interno superior e inferior */
+}
+
+.imagenes-container {
+  max-width: 1200px; /* Ancho máximo para el contenedor de imágenes */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  display: flex; /* Utiliza flexbox para alinear las imágenes */
+  justify-content: space-around; /* Espaciado uniforme entre las imágenes */
+}
+
+.imagen-container {
+  flex: 1; /* Ocupa todo el espacio disponible */
+  margin: 0 10px; /* Agrega espacio entre las imágenes */
+  justify-items: center;
+}
+
+
+
+
+
+footer {
+  background-color: #000000;
+  color: #ffffff; /* Cambia el color del texto a blanco */
+  padding: 20px; /* Añade un espacio alrededor del contenido del footer */
+  text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Aquí puedes agregar estilos CSS específicos para dispositivos móviles */
 }
