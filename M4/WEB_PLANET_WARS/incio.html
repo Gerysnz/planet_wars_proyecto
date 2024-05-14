@@ -10,6 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- VIDEO DE FONDO -->
+    <video autoplay muted loop id="background-video">
+        <source src="imgs/119389-717712166_small.mp4" type="video/mp4">
+    </video>
     <!-- BARRA NAVEGACIÓN -->
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">             
@@ -21,10 +25,10 @@
                 <!-- MENÚ -->
                 <ul class="navbar-nav"> 
                     <li class="nav-item">
-                        <a class="opcionesMENU" aria-current="page" href="#"> Home </a>
+                        <a class="opcionesMENU" aria-current="page" href="incio.html"> Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="opcionesMENU" href="#"> Tutorial </a>
+                        <a class="opcionesMENU" href="tutorial.html"> Tutorial </a>
                     </li>
                     <li class="nav-item">
                         <a  class="opcionesMENU" href="#"> Merchandising </a>
@@ -50,18 +54,25 @@
         </div>
 
         <section1> 
+            <canvas id="miCanvas" width="400" height="200"></canvas>
+            <div class="section-container">
+                <h1>¡Bienvenido!</h1>
+                <p>Este es un ejemplo de texto dentro del div.</p>
+            </div>
         </section1>
 
         <!-- SECCIÓN IMAGENES -->
-        <h2> IMAGENES </h2>
-        <div class="gallery-container">
-            <section>
+
+        <div class="gallery-wrapper">
+            <section class="gallery-container">
                 <img src="imgs/idea1.png">
                 <img src="imgs/idea1.png">
                 <img src="imgs/idea1.png">
                 <img src="imgs/idea1.png">
             </section>
-        </div>
+          </div>
+          
+
     </main>
 
     <!-- PIE DE PÁGINA -->
