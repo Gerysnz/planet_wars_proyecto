@@ -1,5 +1,6 @@
 package pw;
 
+
 public abstract class defense implements militaryUnit, variables{
 	private int armor;
 	private int initialArmor;
@@ -15,7 +16,7 @@ public abstract class defense implements militaryUnit, variables{
 	@Override
 	public int attack() {
 		// TODO Auto-generated method stub
-		return 0;
+		return baseDamage;
 	}
 
 	@Override
@@ -26,21 +27,38 @@ public abstract class defense implements militaryUnit, variables{
 
 	@Override
 	public int getActualArmor() {
-		// TODO Auto-generated method stub
-		return 0;
+		return armor;
 	}
 
 	@Override
 	public int getMetalCost() {
-		// TODO Auto-generated method stub
-		return 0;
+		if (this instanceof missileLauncher) {
+            return variables.METAL_COST_MISSILELAUNCHER;
+        } else if (this instanceof ionCannon) {
+            return variables.METAL_COST_IONCANNON;
+        } else if (this instanceof plasmaCannon) {
+            return variables.METAL_COST_PLASMACANNON;
+        } else {
+        	return 0;
+        }
+       
 	}
+	
 
 	@Override
 	public int getDeuteriumCost() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+		 if (this instanceof missileLauncher) {
+	            return variables.DEUTERIUM_COST_MISSILELAUNCHER;
+	        } else if (this instanceof ionCannon) {
+	            return variables.DEUTERIUM_COST_IONCANNON;
+	        } else if (this instanceof plasmaCannon) {
+	            return variables.DEUTERIUM_COST_PLASMACANNON;
+	        } else {
+	        	return 0;
+	        }
+	       
+		}
+	
 
 	@Override
 	public int getChanceGeneratingWaste() {
@@ -56,7 +74,7 @@ public abstract class defense implements militaryUnit, variables{
 
 	@Override
 	public void resetArmor() {
-		// TODO Auto-generated method stub
+		armor = initialArmor;
 		
 	}
 

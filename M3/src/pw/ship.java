@@ -30,8 +30,7 @@ public class ship implements militaryUnit, variables{
 	}
 	@Override
 	public int attack() {
-		// TODO Auto-generated method stub
-		return 0;
+		return baseDamage;
 	}
 	@Override
 	public void takeDamage(int receivedDamage) {
@@ -45,13 +44,32 @@ public class ship implements militaryUnit, variables{
 	}
 	@Override
 	public int getMetalCost() {
-		// TODO Auto-generated method stub
-		return 0;
+		if (this instanceof heavyHunter) {
+            return variables.METAL_COST_HEAVYHUNTER;
+        } else if (this instanceof armoredShip) {
+            return variables.METAL_COST_ARMOREDSHIP;
+        } else if (this instanceof ligthHunter) {
+            return variables.METAL_COST_LIGTHHUNTER;
+        } else if (this instanceof battleShip) {
+            return variables.METAL_COST_BATTLESHIP;   
+        } else {
+        	return 0;
+        }
+	
 	}
 	@Override
 	public int getDeuteriumCost() {
-		// TODO Auto-generated method stub
-		return 0;
+		if (this instanceof heavyHunter) {
+            return variables.DEUTERIUM_COST_HEAVYHUNTER;
+        } else if (this instanceof armoredShip) {
+            return variables.DEUTERIUM_COST_ARMOREDSHIP;
+        } else if (this instanceof ligthHunter) {
+            return variables.DEUTERIUM_COST_LIGTHHUNTER;
+        } else if (this instanceof battleShip) {
+            return variables.DEUTERIUM_COST_BATTLESHIP;   
+        } else {
+        	return 0;
+        }
 	}
 	@Override
 	public int getChanceGeneratingWaste() {
@@ -65,7 +83,7 @@ public class ship implements militaryUnit, variables{
 	}
 	@Override
 	public void resetArmor() {
-		// TODO Auto-generated method stub
+		armor = initialArmor;
 		
 	}
 	
