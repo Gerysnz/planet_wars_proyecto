@@ -7,6 +7,14 @@ body {
   padding: 0;
 }
 
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 6em;
+  padding-top: 1%;
+}
+
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 600px) {
   body {
@@ -21,7 +29,7 @@ body {
 header {
   background-color: #000000;
   position: sticky;
-  width: 100%;
+  width: auto;
   top: 0%;
   
 }
@@ -100,80 +108,76 @@ header {
   width: 70%;
 }
 
+/* BOTÓN GITHUB */
+.Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .3s;
+  z-index: 1;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all .3s;
+  border: 1px solid rgba(233, 233, 233, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #181818;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all .3s;
+}
+
+.Btn:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+  background-color: rgba(235, 232, 232, 0.466);
+  backdrop-filter: blur(4px);
+}
+
+
 
 main {
   padding-top: 10px;
   padding: 2%;
-
 }
 
 /* TITULO  PRINCIPAL */
 .titulo {
   text-align: center; 
-  padding-bottom: 30%;
-  padding-top: 1%;
+  padding-bottom: 20%;
+  padding-top: 2%;
 }
 
 .titulo h2 {
-  font-size: 7em;
-  padding-top: 9%;
-  margin-bottom: 0;
-}
-
-/* BOTON DOWNLOAD */
-.botonDOWNLOAD {
-  color: #fff;
-  cursor: pointer;
-  display: block;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 45px;
-  max-width: 160px;
-  margin: 0 auto 2em;
-  position: relative;
-  text-transform: uppercase;
-  width: 100%;
-}
-
-.botonDOWNLOAD {
-  border: 0 solid;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-  outline: 1px solid;
-  outline-color: rgba(133, 158, 241, 0.945);
-  outline-offset: 0px;
-  text-shadow: none;
-  -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-          transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-  outline-color: rgba(255, 255, 255, 0.5);
-  outline-offset: 0px;
-}
-
-.botonDOWNLOAD:hover {
-  border: 1px solid;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
-  outline-offset: 15px;
-  outline-color: rgba(255, 255, 255, 0);
-  text-shadow: 1px 1px 2px #427388;
-}
-
-
-/* RECUADRO CON FONDO BLANCO */
-.section-container {
-  position: relative; 
-  background-color: white; 
-  border-radius: 20px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-  padding: 0.5px;
-  z-index: -1; 
-}
-
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; 
+  font-size: 8em;
+  padding-top: 2%;
 }
 
 /* SEGUNDO TITULO (IMAGENES) */
@@ -182,25 +186,33 @@ h2 {
   color: aliceblue;
 }
 
-/* AJUSTE PARA CONTENEDORES IMG */
-.imagenes-section {
-  background-color: #f0f0f0;
-  padding: 20px 0;
+/* GALERIA IMAGENES */
+.gallery-container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  margin-top: 50px; /* Ajusta según sea necesario */
 }
 
-.imagenes-container {
-  max-width: 1200px; /* Ancho máximo para el contenedor de imágenes */
-  margin: 0 auto; /* Centra el contenedor horizontalmente */
-  display: flex; /* Utiliza flexbox para alinear las imágenes */
-  justify-content: space-around; /* Espaciado uniforme entre las imágenes */
+section {
+  display: flex;
+  width: 600px;
+  height: 430px;
 }
 
-.imagen-container {
-  flex: 1; /* Ocupa todo el espacio disponible */
-  margin: 0 10px; /* Agrega espacio entre las imágenes */
-  justify-items: center;
+section img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
 }
 
+section img:hover {
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
 
 
 
