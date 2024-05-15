@@ -22,9 +22,12 @@ public class planet {
 		this.upgradeDefenseTechnologyDeuteriumCost = upgradeDefenseTechnologyDeuteriumCost;
 		this.upgradeAttackTechnologyDeuteriumCost = upgradeAttackTechnologyDeuteriumCost;
 		this.army = army;
-		/*for (int i = 0; i < 7; i++) {
+	}
+		
+		public planet() {
+		for (int i = 0; i < 7; i++) {
             this.army[i] = new ArrayList<militaryUnit>();
-        }*/
+        }
 	}
 
 	public int getTechnologyDefense() {
@@ -83,6 +86,8 @@ public class planet {
 		this.army = army;
 	}
 	
+/**********************************************************************************************************/
+	
 	public void upgradeTechnologyDefense() throws resourceException {
 		int currentCost = upgradeDefenseTechnologyDeuteriumCost;
 		if (deuterium >= currentCost) {
@@ -108,8 +113,18 @@ public class planet {
         }
     }
 
-    public void newLigthHunter(int n) throws resourceException {
+    public void newLigthHunter(int n) throws resourceException{
+        int precio = n;
+        for (int i = 0; i < n; i++) {
+            if (deuterium >= precio & metal >= precio) {
+            	//aqui hay que meter el calculo de restablecer la armadura a su valor original
 
+                army[0].add(new ligthHunter());
+                deuterium -= precio;
+            } else {
+                throw new resourceException("Deuterium insuficiente para construir unidades.");
+            }
+            }
     }
 
     public void newHeavyHunter(int n) throws resourceException {
