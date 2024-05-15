@@ -1,11 +1,11 @@
 /* Estilos generales */
 body {
-  background-size: cover;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
 /* ENCABEZADO */
 header {
   background-color: #000000;
@@ -15,6 +15,19 @@ header {
   
 }
 
+/* VIDEO DE FONDO */
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: -107px; /* Ajusta según sea necesario */
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -1; /* Asegura que el video esté detrás de otros elementos */
+}
+
+  
 /* AJUSTES BARRA DE NAVEGACIÓN */
 .navbar {
   background-color: #000000;
@@ -167,8 +180,6 @@ main {
   opacity: 0.6; /* Ajusta la opacidad del fondo aquí */
   z-index: -1;
 }
-
-
 
 
 
