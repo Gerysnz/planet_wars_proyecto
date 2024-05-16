@@ -1,6 +1,6 @@
 package pw;
 
-public class ship implements militaryUnit, variables{
+public abstract class ship implements militaryUnit, variables{
 	private int armor;
 	private int initialArmor;
 	private int baseDamage;

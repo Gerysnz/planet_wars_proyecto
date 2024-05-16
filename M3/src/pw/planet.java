@@ -2,7 +2,7 @@ package pw;
 
 import java.util.ArrayList;
 
-public class planet {
+public class planet implements variables{
 	int technologyDefense;
 	int technologyAtack;
 	int metal;
@@ -114,20 +114,31 @@ public class planet {
     }
 
     public void newLigthHunter(int n) throws resourceException{
-        int precio = n;
+        int unidad = n;
         for (int i = 0; i < n; i++) {
-            if (deuterium >= precio & metal >= precio) {
-            	//aqui hay que meter el calculo de restablecer la armadura a su valor original
-
+            if (deuterium >= DEUTERIUM_COST_LIGTHHUNTER & metal >= METAL_COST_LIGTHHUNTER) {
+                int armor = ARMOR_LIGTHHUNTER + ((technologyDefense * PLUS_ARMOR_LIGTHHUNTER_BY_TECHNOLOGY) * 1000 / 100);
+                int baseDamage = BASE_DAMAGE_LIGTHHUNTER + ((technologyAtack * PLUS_ATTACK_LIGTHHUNTER_BY_TECHNOLOGY) * BASE_DAMAGE_LIGTHHUNTER / 100);
+                deuterium -= DEUTERIUM_COST_LIGTHHUNTER;
+                metal -= METAL_COST_LIGTHHUNTER;
                 army[0].add(new ligthHunter());
-                deuterium -= precio;
             } else {
                 throw new resourceException("Deuterium insuficiente para construir unidades.");
             }
-            }
+        }
     }
-
     public void newHeavyHunter(int n) throws resourceException {
+    	int unidad = n;
+        for (int i = 0; i < n; i++) {
+            if (deuterium >= DEUTERIUM_COST_HEAVYHUNTER & metal >= METAL_COST_HEAVYHUNTER) {
+                int armor = ARMOR_LIGTHHUNTER + ((technologyDefense * PLUS_ARMOR_LIGTHHUNTER_BY_TECHNOLOGY) * 1000 / 100);
+                int baseDamage = BASE_DAMAGE_HEAVYHUNTER + ((technologyAtack * PLUS_ATTACK_LIGTHHUNTER_BY_TECHNOLOGY) * BASE_DAMAGE_LIGTHHUNTER / 100);
+                deuterium -= DEUTERIUM_COST_HEAVYHUNTER;
+                metal -= METAL_COST_HEAVYHUNTER;
+                army[0].add(new heavyHunter());
+            } else {
+                throw new resourceException("Deuterium insuficiente para construir unidades.");
+            }
 
     }
 
@@ -143,11 +154,11 @@ public class planet {
 
     }
 
-    public void newIonCannon(int n) {
+    public void newIonCannon(int n) throws resourceException{
 
     }
 
-    public void newPlasmaCannon(int n) {
+    public void newPlasmaCannon(int n) throws resourceException{
 
     }
 
