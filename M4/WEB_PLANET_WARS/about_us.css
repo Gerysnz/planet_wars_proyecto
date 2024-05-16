@@ -16,7 +16,7 @@ header {
 
 /* Estilos para la barra de navegación */
 .navbar {
-  background-image: url('/M4/WEB_PLANET_WARS/fondo_pag.png'); /* Ruta de la imagen de fondo */
+  background-color: #000000; /* Ruta de la imagen de fondo */
   background-size: auto; /* Ajustar la imagen de fondo al tamaño del encabezado */
   display: flex; /* Utilizar flexbox */
   justify-content: space-between; /* Distribuir elementos de manera uniforme */
