@@ -12,8 +12,8 @@ public class heavyHunter extends ship{
 		
 	}
 	 // Segundo contructor
-    /*public heavyHunter() {
-        this(ARMOR_HEAVYHUNTER, BASE_DAMAGE_HEAVYHUNTER);
-    }*/
+    public heavyHunter() {
+        this(1000,50);
+    }
 
 }

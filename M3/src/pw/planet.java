@@ -131,13 +131,14 @@ public class planet implements variables{
     	int unidad = n;
         for (int i = 0; i < n; i++) {
             if (deuterium >= DEUTERIUM_COST_HEAVYHUNTER & metal >= METAL_COST_HEAVYHUNTER) {
-                int armor = ARMOR_LIGTHHUNTER + ((technologyDefense * PLUS_ARMOR_LIGTHHUNTER_BY_TECHNOLOGY) * 1000 / 100);
-                int baseDamage = BASE_DAMAGE_HEAVYHUNTER + ((technologyAtack * PLUS_ATTACK_LIGTHHUNTER_BY_TECHNOLOGY) * BASE_DAMAGE_LIGTHHUNTER / 100);
+                int armor = ARMOR_HEAVYHUNTER + ((technologyDefense * PLUS_ARMOR_HEAVYHUNTER_BY_TECHNOLOGY) * 1000 / 100);
+                int baseDamage = BASE_DAMAGE_HEAVYHUNTER + ((technologyAtack * PLUS_ATTACK_HEAVYHUNTER_BY_TECHNOLOGY) * BASE_DAMAGE_HEAVYHUNTER / 100);
                 deuterium -= DEUTERIUM_COST_HEAVYHUNTER;
                 metal -= METAL_COST_HEAVYHUNTER;
                 army[0].add(new heavyHunter());
             } else {
                 throw new resourceException("Deuterium insuficiente para construir unidades.");
+            }
             }
 
     }
