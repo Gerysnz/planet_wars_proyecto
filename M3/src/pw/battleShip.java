@@ -9,7 +9,10 @@ public class battleShip extends ship{
 
 	public battleShip(int armor, int baseDamage) {
 		super(armor, baseDamage);
-		// TODO Auto-generated constructor stub
+		
 	}
+	public battleShip() {
+        this(6000,1000);
+    }
 
 }

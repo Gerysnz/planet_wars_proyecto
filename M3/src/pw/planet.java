@@ -143,13 +143,35 @@ public class planet implements variables{
 
     }
 
-    public void newBattleShip(int n) throws resourceException{
+    public void newBattleShip(int n) throws resourceException {
+    	int unidad = n;
+        for (int i = 0; i < n; i++) {
+            if (deuterium >= DEUTERIUM_COST_BATTLESHIP & metal >= METAL_COST_BATTLESHIP) {
+                int armor = ARMOR_BATTLESHIP + ((technologyDefense * PLUS_ARMOR_BATTLESHIP_BY_TECHNOLOGY) * 1000 / 100);
+                int baseDamage = BASE_DAMAGE_BATTLESHIP + ((technologyAtack * PLUS_ATTACK_BATTLESHIP_BY_TECHNOLOGY) * BASE_DAMAGE_BATTLESHIP / 100);
+                deuterium -= DEUTERIUM_COST_BATTLESHIP;
+                metal -= METAL_COST_BATTLESHIP;
+                army[0].add(new battleShip());
+            } else {
+                throw new resourceException("Deuterium insuficiente para construir unidades.");
+            }
+            }
+            }
 
-    }
-
-    public void newArmoredShip(int n) throws resourceException{
-
-    }
+    public void newArmoredShip(int n) throws resourceException {
+    	int unidad = n;
+        for (int i = 0; i < n; i++) {
+            if (deuterium >= DEUTERIUM_COST_ARMOREDSHIP & metal >= METAL_COST_ARMOREDSHIP) {
+                int armor = ARMOR_ARMOREDSHIP + ((technologyDefense * PLUS_ARMOR_ARMOREDSHIP_BY_TECHNOLOGY) * 1000 / 100);
+                int baseDamage = BASE_DAMAGE_ARMOREDSHIP + ((technologyAtack * PLUS_ATTACK_ARMOREDSHIP_BY_TECHNOLOGY) * BASE_DAMAGE_ARMOREDSHIP / 100);
+                deuterium -= DEUTERIUM_COST_ARMOREDSHIP;
+                metal -= METAL_COST_ARMOREDSHIP;
+                army[0].add(new heavyHunter());
+            } else {
+                throw new resourceException("Deuterium insuficiente para construir unidades.");
+            }
+            }
+            }
 
     public void newMissileLauncher(int n) throws resourceException{
 

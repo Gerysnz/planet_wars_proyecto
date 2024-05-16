@@ -1,13 +1,18 @@
 package pw;
 
 public class plasmaCannon extends defense{
-	private static final int  ARMOR_BATTLESHIP = 6000;
-	private static final int PLUS_ARMOR_BATTLESHIP_BY_TECHNOLOGY = 5;
+	private  final int  ARMOR_PLASMACANNON = 6000;
+	private  final int PLUS_ARMOR_PLASMACANNON_BY_TECHNOLOGY = 5;
+	private  final int  BASE_DAMAGE_PLASMACANNON = 150;
+	private  final int  PLUS_ATTACK_PLASMACANNON_BY_TECHNOLOGY = 5;
 
 
 	public plasmaCannon(int armor, int baseDamage) {
 		super(armor, baseDamage);
-		// TODO Auto-generated constructor stub
+		
 	}
+	public plasmaCannon() {
+        this(6000,150);
+    }
 
 }

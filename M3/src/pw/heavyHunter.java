@@ -13,7 +13,7 @@ public class heavyHunter extends ship{
 	}
 	 // Segundo contructor
     public heavyHunter() {
-        this(1000,50);
+        this(1000,150);
     }
 
 }

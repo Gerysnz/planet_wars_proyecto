@@ -13,7 +13,7 @@ public class ligthHunter extends ship{
     }
     // Segundo contructor
     public ligthHunter() {
-        this(1000,50);
+        this(400,80);
     }
 
 }
