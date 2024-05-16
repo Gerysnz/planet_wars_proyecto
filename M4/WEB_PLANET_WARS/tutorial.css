@@ -6,6 +6,18 @@ body {
   padding: 0;
 }
 
+/* VIDEO DE FONDO */
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -1; /* Asegura que el video esté detrás de otros elementos */
+}
+
 /* ENCABEZADO */
 header {
   background-color: #000000;
@@ -23,8 +35,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 15px;
-  
-
 }
 
 .navbar-brand {
@@ -168,6 +178,63 @@ main {
   z-index: -1;
 }
 
+#botonEjecutar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 10px;
+  color: white;
+  text-shadow: 2px 2px rgb(116, 116, 116);
+  text-transform: uppercase;
+  cursor: pointer;
+  border: solid 2px black;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 17px;
+  background-color: hsl(49deg 98% 60%);
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+#botonEjecutar:active {
+  transform: scale(0.9);
+  transition: all 100ms ease;
+}
+
+#botonEjecutar svg {
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+#botonEjecutar .play {
+  transition: all 0.5s ease;
+  transition-delay: 300ms;
+}
+
+#botonEjecutar:hover svg {
+  transform: scale(3) translate(50%);
+}
+
+#botonEjecutar .now {
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+#botonEjecutar:hover .now {
+  transform: translateX(10px);
+  transition-delay: 300ms;
+}
+
+#botonEjecutar:hover .play {
+  transform: translateX(200%);
+  transition-delay: 300ms;
+}
 
 
 
