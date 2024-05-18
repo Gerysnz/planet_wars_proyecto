@@ -1,22 +1,12 @@
 /* Estilos generales */
 body {
+  background-image: url(imgs/fongoestrellado.png);
   background-size: cover;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* VIDEO DE FONDO */
-#background-video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-  width: auto; 
-  height: auto;
-  z-index: -1; /* Asegura que el video esté detrás de otros elementos */
-}
 
 /* ENCABEZADO */
 header {
@@ -35,6 +25,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 15px;
+  z-index: 10;
 }
 
 .navbar-brand {
@@ -158,12 +149,42 @@ main {
   padding: 2%;
 }
 
-/* RECUADRO CON FONDO */
+/* secciónn sin fondo */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  z-index: -1;
+}
+.container img {
+  max-width: 100%;
+  height: auto;
+}
+.container .text {
+  flex: 1;
+  padding: 20px;
+  color: #fff;
+  text-align: justify;
+}
+.container .image {
+  flex: 1;
+  padding: 20px;
+}
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* sección con fondo */
 .section-container {
   position: relative;
   padding: 20px; /* Ajusta según sea necesario */
   color: #ffffff;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  z-index: -1;
 }
 
 .section-container::before {
@@ -178,62 +199,11 @@ main {
   z-index: -1;
 }
 
-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 0 10px;
-  color: white;
-  text-shadow: 2px 2px rgb(116, 116, 116);
-  text-transform: uppercase;
-  cursor: pointer;
-  border: solid 2px black;
-  letter-spacing: 1px;
-  font-weight: 600;
-  font-size: 17px;
-  background-color: hsl(49deg 98% 60%);
-  border-radius: 50px;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.5s ease;
-}
-
-button:active {
-  transform: scale(0.9);
-  transition: all 100ms ease;
-}
-
-button svg {
-  transition: all 0.5s ease;
-  z-index: 2;
-}
-
-.play {
-  transition: all 0.5s ease;
-  transition-delay: 300ms;
-}
-
-button:hover svg {
-  transform: scale(3) translate(50%);
-}
-
-.now {
-  position: absolute;
-  left: 0;
-  transform: translateX(-100%);
-  transition: all 0.5s ease;
-  z-index: 2;
-}
-
-button:hover .now {
-  transform: translateX(10px);
-  transition-delay: 300ms;
-}
-
-button:hover .play {
-  transform: translateX(200%);
-  transition-delay: 300ms;
+.section-container .text, .section-container .image {
+  z-index: 1; 
+  flex: 1;
+  padding: 20px;
+  text-align: justify;
 }
 
 
