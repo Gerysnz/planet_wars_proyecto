@@ -62,13 +62,13 @@ public abstract class defense implements militaryUnit, variables{
 
 	@Override
 	public int getChanceGeneratingWaste() {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 
 	@Override
 	public int getChanceAttackAgain() {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 

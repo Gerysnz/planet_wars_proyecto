@@ -1,9 +1,9 @@
 package pw;
 
 public class plasmaCannon extends defense{
-	private  final int  ARMOR_PLASMACANNON = 6000;
+	private  final int  ARMOR_PLASMACANNON = 7000;
 	private  final int PLUS_ARMOR_PLASMACANNON_BY_TECHNOLOGY = 5;
-	private  final int  BASE_DAMAGE_PLASMACANNON = 150;
+	private  final int  BASE_DAMAGE_PLASMACANNON = 2000;
 	private  final int  PLUS_ATTACK_PLASMACANNON_BY_TECHNOLOGY = 5;
 
 
@@ -12,7 +12,7 @@ public class plasmaCannon extends defense{
 		
 	}
 	public plasmaCannon() {
-        this(6000,150);
+        this(7000,2000);
     }
 
 }

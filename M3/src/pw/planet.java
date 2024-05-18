@@ -135,7 +135,7 @@ public class planet implements variables{
                 int baseDamage = BASE_DAMAGE_HEAVYHUNTER + ((technologyAtack * PLUS_ATTACK_HEAVYHUNTER_BY_TECHNOLOGY) * BASE_DAMAGE_HEAVYHUNTER / 100);
                 deuterium -= DEUTERIUM_COST_HEAVYHUNTER;
                 metal -= METAL_COST_HEAVYHUNTER;
-                army[0].add(new heavyHunter());
+                army[1].add(new heavyHunter());
             } else {
                 throw new resourceException("Deuterium insuficiente para construir unidades.");
             }
@@ -151,7 +151,7 @@ public class planet implements variables{
                 int baseDamage = BASE_DAMAGE_BATTLESHIP + ((technologyAtack * PLUS_ATTACK_BATTLESHIP_BY_TECHNOLOGY) * BASE_DAMAGE_BATTLESHIP / 100);
                 deuterium -= DEUTERIUM_COST_BATTLESHIP;
                 metal -= METAL_COST_BATTLESHIP;
-                army[0].add(new battleShip());
+                army[2].add(new battleShip());
             } else {
                 throw new resourceException("Deuterium insuficiente para construir unidades.");
             }
@@ -166,7 +166,7 @@ public class planet implements variables{
                 int baseDamage = BASE_DAMAGE_ARMOREDSHIP + ((technologyAtack * PLUS_ATTACK_ARMOREDSHIP_BY_TECHNOLOGY) * BASE_DAMAGE_ARMOREDSHIP / 100);
                 deuterium -= DEUTERIUM_COST_ARMOREDSHIP;
                 metal -= METAL_COST_ARMOREDSHIP;
-                army[0].add(new heavyHunter());
+                army[3].add(new heavyHunter());
             } else {
                 throw new resourceException("Deuterium insuficiente para construir unidades.");
             }
@@ -174,14 +174,54 @@ public class planet implements variables{
             }
 
     public void newMissileLauncher(int n) throws resourceException{
+    	int unidad = n;
+        if (deuterium >= DEUTERIUM_COST_MISSILELAUNCHER & metal >= METAL_COST_MISSILELAUNCHER) {
+            for (int i = 0; i < unidad; i++) {
+                int armor = ARMOR_MISSILELAUNCHER + ((technologyDefense * PLUS_ARMOR_MISSILELAUNCHER_BY_TECHNOLOGY) * 1000 / 100);
+                int baseDamage = BASE_DAMAGE_MISSILELAUNCHER + ((technologyAtack * PLUS_ATTACK_MISSILELAUNCHER_BY_TECHNOLOGY) * BASE_DAMAGE_MISSILELAUNCHER / 100);
+                deuterium -= DEUTERIUM_COST_MISSILELAUNCHER;
+                metal -= METAL_COST_MISSILELAUNCHER;
+                army[4].add(new missileLauncher());
+            }
+        } else {
+            throw new resourceException("Deuterium insuficiente para construir unidades.");
+        }
 
     }
 
     public void newIonCannon(int n) throws resourceException{
+    	int unidad = n;
+        if (deuterium >= DEUTERIUM_COST_IONCANNON & metal >= METAL_COST_IONCANNON) {
+            for (int i = 0; i < unidad; i++) {
+                int armor = ARMOR_IONCANNON + ((technologyDefense * PLUS_ARMOR_IONCANNON_BY_TECHNOLOGY) * 1000 / 100);
+                int baseDamage = BASE_DAMAGE_IONCANNON + ((technologyAtack * PLUS_ATTACK_IONCANNON_BY_TECHNOLOGY) * BASE_DAMAGE_IONCANNON / 100);
+                deuterium -= DEUTERIUM_COST_IONCANNON;
+                metal -= METAL_COST_IONCANNON;
+                army[5].add(new ionCannon());
+            }
+        } else {
+            throw new resourceException("Deuterium insuficiente para construir unidades.");
+        }
 
     }
 
+    
+
     public void newPlasmaCannon(int n) throws resourceException{
+    	int unidad = n;
+        if (deuterium >= DEUTERIUM_COST_PLASMACANNON & metal >= METAL_COST_PLASMACANNON) {
+            for (int i = 0; i < unidad; i++) {
+                int armor = ARMOR_PLASMACANNON + ((technologyDefense * PLUS_ARMOR_PLASMACANNON_BY_TECHNOLOGY) * 1000 / 100);
+                int baseDamage = BASE_DAMAGE_PLASMACANNON + ((technologyAtack * PLUS_ATTACK_PLASMACANNON_BY_TECHNOLOGY) * BASE_DAMAGE_PLASMACANNON / 100);
+                deuterium -= DEUTERIUM_COST_PLASMACANNON;
+                metal -= METAL_COST_PLASMACANNON;
+                army[6].add(new plasmaCannon());
+
+            }
+        } else {
+            throw new resourceException("Deuterium insuficiente para construir unidades.");
+            }
+    	
 
     }
 
