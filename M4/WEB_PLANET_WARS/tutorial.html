@@ -6,6 +6,20 @@
     <title>Planet Wars</title>
     <link rel="stylesheet" href="tutorial.css">
     <link rel="icon" href="imgs/logo_planet.png" type="image/x-icon">
+    <script>
+        function mostrarSeccion(seccionId) {
+            // Ocultar todas las secciones
+            var secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(function(seccion) {
+                seccion.style.display = 'none';
+            });
+    
+            // Mostrar la sección correspondiente al botón clicado
+            var seccionMostrar = document.getElementById('seccion-' + seccionId);
+            seccionMostrar.style.display = 'block';
+        }
+    </script>
+    
 </head>
 <body>
     <header>
@@ -42,10 +56,15 @@
     </header>
 
     <main>
-        <!-- BLOQUES INFO -->
-        <section class="section-container">
+<!-- TITULO INICIAL -->
+        <div class="titulo">
+            <h2> TUTORIAL </h2>
+        </div>
+
+        <!-- BLOQUES INFO (1) -->
+        <section class="section-inicial">
             <div class="text">
-                <h1>Planet Wars Simplificado</h1>
+                <h1> ¿Qué ès Planet Wars </h1>
                 <p>Planet Wars es una aplicación de estrategia en línea inspirada en el popular juego de navegador Ogame.
                     Los jugadores se sumergen en un universo lleno de planetas, recursos, flotas de naves y tecnologías.
                     Cada jugador representa un gobernante planetario, encargado de gestionar sus recursos, desarrollar tecnologías y fortalecer sus defensas mientras navega por un cosmos lleno de peligros.
@@ -58,20 +77,86 @@
             </div>
         </section>
 
-        <section class="container reverse">
-            <div class="text">
-                <h1>HAHHAHAH</h1>
-                <p>Planet Wars es una aplicación de estrategia en línea inspirada en el popular juego de navegador Ogame.
-                    Los jugadores se sumergen en un universo lleno de planetas, recursos, flotas de naves y tecnologías.
-                    Cada jugador representa un gobernante planetario, encargado de gestionar sus recursos, desarrollar tecnologías y fortalecer sus defensas mientras navega por un cosmos lleno de peligros.
-                    En este vasto universo, se encuentran otros planetas cuyos gobernantes tienen la intención de conquistar y saquear.
-                    La estrategia, la diplomacia y la táctica son esenciales para defender nuestro planeta y expandir nuestro imperio galáctico.
-                </p>
-            </div>
-            <div class="image">
-                <img src="imgs/idea1.png" alt="Descripción de la imagen 2">
-            </div>
+        <!-- BOTONES DIVISOR DE SECCIONES -->
+        <div class="alinear-botones">
+            <button class="btn" type="button" onclick="mostrarSeccion('funciones')">
+                <strong> FUNCIONES </strong>
+                <div id="container-stars">
+                    <div id="stars"></div>
+                </div>
+                
+                <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </button>
+
+            <button class="btn" type="button" onclick="mostrarSeccion('opciones')">
+                <strong> OPCIONES </strong>
+                <div id="container-stars">
+                    <div id="stars"></div>
+                </div>
+                
+                <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </button>
+                
+            <button class="btn" type="button" onclick="mostrarSeccion('secciones')">
+                <strong> SECCIONES </strong>
+                <div id="container-stars">
+                    <div id="stars"></div>
+                </div>
+                
+                <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </button>
+        </div>
+
+        <!-- FUNCIONES -->
+        <section id="seccion-funciones" class="seccion" style="display: none;">
+            <section class="section-derecha">
+                <div class="text">
+                    <h1> ¿Qué ès Planet Wars </h1>
+                    <p>Planet Wars es una aplicación de estrategia en línea inspirada en el popular juego de navegador Ogame.
+                        Los jugadores se sumergen en un universo lleno de planetas, recursos, flotas de naves y tecnologías.
+                        Cada jugador representa un gobernante planetario, encargado de gestionar sus recursos, desarrollar tecnologías y fortalecer sus defensas mientras navega por un cosmos lleno de peligros.
+                        En este vasto universo, se encuentran otros planetas cuyos gobernantes tienen la intención de conquistar y saquear.
+                        La estrategia, la diplomacia y la táctica son esenciales para defender nuestro planeta y expandir nuestro imperio galáctico.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="imgs/idea1.png" alt="Descripción de la imagen 1">
+                </div>
+            </section>
         </section>
+
+        <!-- OPCIONES -->
+        <section id="seccion-opciones" class="seccion" style="display: none;">
+            <section class="container-izquierda reverse">
+                <div class="text">
+                    <h1> ¿Qué ès Planet Wars </h1>
+                    <p>Planet Wars es una aplicación de estrategia en línea inspirada en el popular juego de navegador Ogame.
+                        Los jugadores se sumergen en un universo lleno de planetas, recursos, flotas de naves y tecnologías.
+                        Cada jugador representa un gobernante planetario, encargado de gestionar sus recursos, desarrollar tecnologías y fortalecer sus defensas mientras navega por un cosmos lleno de peligros.
+                        En este vasto universo, se encuentran otros planetas cuyos gobernantes tienen la intención de conquistar y saquear.
+                        La estrategia, la diplomacia y la táctica son esenciales para defender nuestro planeta y expandir nuestro imperio galáctico.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="imgs/idea1.png" alt="Descripción de la imagen 1">
+                </div>
+            </section>
+        </section>
+
+        <!-- SECCIONES -->
+        <section id="seccion-secciones" class="seccion" style="display: none;">
+            <!-- Contenido de la sección SECCIONES -->
+        </section>
+
     </main>
 
     <!-- PIE DE PÁGINA -->

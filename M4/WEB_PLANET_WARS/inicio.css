@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-  background-size: cover;
+  background-size: auto;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -19,12 +19,13 @@ body {
 }
 
 /* FONT TITULO INICIAL */
-.press-start-2p-regular {
+.titulo-inicial {
   font-family: "Press Start 2P", system-ui;
   font-weight: 300;
   font-style: normal;
   font-size: 6em;
   padding-bottom: 4%;
+  color: #fff;
 }
 
 /* ENCABEZADO */
@@ -167,25 +168,6 @@ header {
 main {
   padding-top: 10px;
   padding: 2%;
-}
-
-/* TITULO  PRINCIPAL */
-.titulo {
-  text-align: center; 
-  padding-bottom: 20%;
-  padding-top: 2%;
-}
-
-.titulo h2 {
-  font-size: 8em;
-  padding-top: 2%;
-}
-
-/* SEGUNDO TITULO (IMAGENES) */
-h2 {
-  text-align: center;
-  color: aliceblue;
-  padding: 5%;
 }
 
 /* RECUADRO CON FONDO */

@@ -1,5 +1,6 @@
 /* Estilos generales */
 body {
+  background-image: url(imgs/fondo_extraterrestre.png);
     background-size: cover;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,18 +14,6 @@ header {
   width: auto;
   top: 0%;
   
-}
-
-/* VIDEO DE FONDO */
-#background-video {
-  position: fixed;
-  right: 0;
-  bottom: -107px; /* Ajusta según sea necesario */
-  min-width: 100%; 
-  min-height: 100%;
-  width: auto; 
-  height: auto;
-  z-index: -1; /* Asegura que el video esté detrás de otros elementos */
 }
 
   

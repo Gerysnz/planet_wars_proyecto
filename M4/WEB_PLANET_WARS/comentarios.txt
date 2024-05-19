@@ -62,6 +62,42 @@ canvas {
 }
 
 
+    <main>
+        <!-- BLOQUES INFO -->
+        <section class="section-container">
+            <div class="text">
+                <h1>Planet Wars Simplificado</h1>
+                <p>Planet Wars es una aplicación de estrategia en línea inspirada en el popular juego de navegador Ogame.
+                    Los jugadores se sumergen en un universo lleno de planetas, recursos, flotas de naves y tecnologías.
+                    Cada jugador representa un gobernante planetario, encargado de gestionar sus recursos, desarrollar tecnologías y fortalecer sus defensas mientras navega por un cosmos lleno de peligros.
+                    En este vasto universo, se encuentran otros planetas cuyos gobernantes tienen la intención de conquistar y saquear.
+                    La estrategia, la diplomacia y la táctica son esenciales para defender nuestro planeta y expandir nuestro imperio galáctico.
+                </p>
+            </div>
+            <div class="image">
+                <img src="imgs/idea1.png" alt="Descripción de la imagen 1">
+            </div>
+        </section>
+
+        <section class="container reverse">
+            <div class="text">
+                <h1>HAHHAHAH</h1>
+                <p>Planet Wars es una aplicación de estrategia en línea inspirada en el popular juego de navegador Ogame.
+                    Los jugadores se sumergen en un universo lleno de planetas, recursos, flotas de naves y tecnologías.
+                    Cada jugador representa un gobernante planetario, encargado de gestionar sus recursos, desarrollar tecnologías y fortalecer sus defensas mientras navega por un cosmos lleno de peligros.
+                    En este vasto universo, se encuentran otros planetas cuyos gobernantes tienen la intención de conquistar y saquear.
+                    La estrategia, la diplomacia y la táctica son esenciales para defender nuestro planeta y expandir nuestro imperio galáctico.
+                </p>
+            </div>
+            <div class="image">
+                <img src="imgs/idea1.png" alt="Descripción de la imagen 2">
+            </div>
+        </section>
+    </main>
+
+
+
+
 BOTON PLAY 
 
 <button>
@@ -137,6 +173,185 @@ button:hover .play {
   transform: translateX(200%);
   transition-delay: 300ms;
 }
+
+
+    <main>
+<!-- TITULO INICIAL -->
+        <div class="titulo">
+            <h2> TUTORIAL </h2>
+        </div>
+
+        <!-- BLOQUES INFO (1) -->
+        <section class="section-inicial">
+            <div class="text">
+                <h1> ¿Qué ès Planet Wars </h1>
+                <p>Planet Wars es una aplicación de estrategia en línea inspirada en el popular juego de navegador Ogame.
+                    Los jugadores se sumergen en un universo lleno de planetas, recursos, flotas de naves y tecnologías.
+                    Cada jugador representa un gobernante planetario, encargado de gestionar sus recursos, desarrollar tecnologías y fortalecer sus defensas mientras navega por un cosmos lleno de peligros.
+                    En este vasto universo, se encuentran otros planetas cuyos gobernantes tienen la intención de conquistar y saquear.
+                    La estrategia, la diplomacia y la táctica son esenciales para defender nuestro planeta y expandir nuestro imperio galáctico.
+                </p>
+            </div>
+            <div class="image">
+                <img src="imgs/idea1.png" alt="Descripción de la imagen 1">
+            </div>
+        </section>
+
+        <!-- BOTONES DIVISOR DE SECCIONES -->
+        <div class="alinear-botones">
+            <button class="btn" type="button">
+                <strong> FUNCIONES </strong>
+                <div id="container-stars">
+                    <div id="stars"></div>
+                </div>
+                
+                <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </button>
+
+            <button class="btn" type="button">
+                <strong> OPCIONES </strong>
+                <div id="container-stars">
+                    <div id="stars"></div>
+                </div>
+                
+                <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </button>
+                
+            <button class="btn" type="button">
+                <strong> SECCIONES </strong>
+                <div id="container-stars">
+                    <div id="stars"></div>
+                </div>
+                
+                <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </button>
+        </div>  
+
+<!-- TITULO FUNCIONES -->
+        <div class="titulo-seccion">
+            <h3> FUNCIONES </h3>
+        </div>
+
+        <!-- BLOQUES INFO (2) -->
+        <section class="container-sinFondo reverse">
+            <div class="text">
+                <h1>HAHHAHAH</h1>
+                <p>Planet Wars es una aplicación de estrategia en línea inspirada en el popular juego de navegador Ogame.
+                    Los jugadores se sumergen en un universo lleno de planetas, recursos, flotas de naves y tecnologías.
+                    Cada jugador representa un gobernante planetario, encargado de gestionar sus recursos, desarrollar tecnologías y fortalecer sus defensas mientras navega por un cosmos lleno de peligros.
+                    En este vasto universo, se encuentran otros planetas cuyos gobernantes tienen la intención de conquistar y saquear.
+                    La estrategia, la diplomacia y la táctica son esenciales para defender nuestro planeta y expandir nuestro imperio galáctico.
+                </p>
+            </div>
+            <div class="image">
+                <img src="imgs/idea1.png" alt="Descripción de la imagen 2">
+            </div>
+        </section>
+
+        <!-- BLOQUES INFO (3) -->
+        <section class="section-conFondo">
+            <div class="text">
+                <h1> ¿Qué ès Planet Wars </h1>
+                <p>Planet Wars es una aplicación de estrategia en línea inspirada en el popular juego de navegador Ogame.
+                    Los jugadores se sumergen en un universo lleno de planetas, recursos, flotas de naves y tecnologías.
+                    Cada jugador representa un gobernante planetario, encargado de gestionar sus recursos, desarrollar tecnologías y fortalecer sus defensas mientras navega por un cosmos lleno de peligros.
+                    En este vasto universo, se encuentran otros planetas cuyos gobernantes tienen la intención de conquistar y saquear.
+                    La estrategia, la diplomacia y la táctica son esenciales para defender nuestro planeta y expandir nuestro imperio galáctico.
+                </p>
+            </div>
+            <div class="image">
+                <img src="imgs/idea1.png" alt="Descripción de la imagen 1">
+            </div>
+        </section>
+
+
+<!-- TITULO OPCIONES -->
+        <div class="titulo-seccion">
+            <h3> OPCIONES </h3>
+        </div>        
+
+        <!-- BLOQUES INFO (4) -->
+        <section class="container-sinFondo reverse">
+            <div class="text">
+                <h1>HAHHAHAH</h1>
+                <p>Planet Wars es una aplicación de estrategia en línea inspirada en el popular juego de navegador Ogame.
+                    Los jugadores se sumergen en un universo lleno de planetas, recursos, flotas de naves y tecnologías.
+                    Cada jugador representa un gobernante planetario, encargado de gestionar sus recursos, desarrollar tecnologías y fortalecer sus defensas mientras navega por un cosmos lleno de peligros.
+                    En este vasto universo, se encuentran otros planetas cuyos gobernantes tienen la intención de conquistar y saquear.
+                    La estrategia, la diplomacia y la táctica son esenciales para defender nuestro planeta y expandir nuestro imperio galáctico.
+                </p>
+            </div>
+            <div class="image">
+                <img src="imgs/idea1.png" alt="Descripción de la imagen 2">
+            </div>
+        </section>
+
+        <!-- BLOQUES INFO (5) -->
+        <section class="section-conFondo">
+            <div class="text">
+                <h1> ¿Qué ès Planet Wars </h1>
+                <p>Planet Wars es una aplicación de estrategia en línea inspirada en el popular juego de navegador Ogame.
+                    Los jugadores se sumergen en un universo lleno de planetas, recursos, flotas de naves y tecnologías.
+                    Cada jugador representa un gobernante planetario, encargado de gestionar sus recursos, desarrollar tecnologías y fortalecer sus defensas mientras navega por un cosmos lleno de peligros.
+                    En este vasto universo, se encuentran otros planetas cuyos gobernantes tienen la intención de conquistar y saquear.
+                    La estrategia, la diplomacia y la táctica son esenciales para defender nuestro planeta y expandir nuestro imperio galáctico.
+                </p>
+            </div>
+            <div class="image">
+                <img src="imgs/idea1.png" alt="Descripción de la imagen 1">
+            </div>
+        </section>
+        
+
+<!-- TITULO SECCIONES -->
+        <div class="titulo-seccion">
+            <h3> SECCIONES </h3>
+        </div>
+
+        <!-- BLOQUES INFO (6) -->
+<section class="section-conFondo">
+            <div class="text">
+                <h1> ¿Qué ès Planet Wars </h1>
+                <p>Planet Wars es una aplicación de estrategia en línea inspirada en el popular juego de navegador Ogame.
+                    Los jugadores se sumergen en un universo lleno de planetas, recursos, flotas de naves y tecnologías.
+                    Cada jugador representa un gobernante planetario, encargado de gestionar sus recursos, desarrollar tecnologías y fortalecer sus defensas mientras navega por un cosmos lleno de peligros.
+                    En este vasto universo, se encuentran otros planetas cuyos gobernantes tienen la intención de conquistar y saquear.
+                    La estrategia, la diplomacia y la táctica son esenciales para defender nuestro planeta y expandir nuestro imperio galáctico.
+                </p>
+            </div>
+            <div class="image">
+                <img src="imgs/idea1.png" alt="Descripción de la imagen 1">
+            </div>
+        </section>
+
+        <!-- BLOQUES INFO (7) -->
+        <section class="section-sinFondo reverse">
+            <div class="text">
+                <h1> ¿Qué ès Planet Wars </h1>
+                <p>Planet Wars es una aplicación de estrategia en línea inspirada en el popular juego de navegador Ogame.
+                    Los jugadores se sumergen en un universo lleno de planetas, recursos, flotas de naves y tecnologías.
+                    Cada jugador representa un gobernante planetario, encargado de gestionar sus recursos, desarrollar tecnologías y fortalecer sus defensas mientras navega por un cosmos lleno de peligros.
+                    En este vasto universo, se encuentran otros planetas cuyos gobernantes tienen la intención de conquistar y saquear.
+                    La estrategia, la diplomacia y la táctica son esenciales para defender nuestro planeta y expandir nuestro imperio galáctico.
+                </p>
+            </div>
+            <div class="image">
+                <img src="imgs/idea1.png" alt="Descripción de la imagen 1">
+            </div>
+        </section>
+
+    </main>
+
+
 
 
 -->
