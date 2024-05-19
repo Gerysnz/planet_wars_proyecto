@@ -28,19 +28,20 @@ public abstract class ship implements militaryUnit, variables{
 	public void setBaseDamage(int baseDamage) {
 		this.baseDamage = baseDamage;
 	}
+/*********************************************************************************************************/
+	
 	@Override
 	public int attack() {
-		return baseDamage;
+		return this.baseDamage;
 	}
 	@Override
 	public void takeDamage(int receivedDamage) {
-		// TODO Auto-generated method stub
+		armor -= receivedDamage;
 		
 	}
 	@Override
 	public int getActualArmor() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.armor;
 	}
 	@Override
 	public int getMetalCost() {
@@ -73,13 +74,31 @@ public abstract class ship implements militaryUnit, variables{
 	}
 	@Override
 	public int getChanceGeneratingWaste() {
-		// TODO Auto-generated method stub
-		return 0;
+		if (this instanceof heavyHunter) {
+            return variables.CHANCE_GENERATNG_WASTE_HEAVYHUNTER;
+        } else if (this instanceof armoredShip) {
+            return variables.CHANCE_GENERATNG_WASTE_ARMOREDSHIP;
+        } else if (this instanceof ligthHunter) {
+            return variables.CHANCE_GENERATNG_WASTE_LIGTHHUNTER;
+        } else if (this instanceof battleShip) {
+            return variables.CHANCE_GENERATNG_WASTE_BATTLESHIP;   
+        } else {
+        	return 0;
+        }
 	}
 	@Override
 	public int getChanceAttackAgain() {
-		// TODO Auto-generated method stub
-		return 0;
+		 if (this instanceof heavyHunter) {
+	            return variables.CHANCE_ATTACK_AGAIN_HEAVYHUNTER;
+	        } else if (this instanceof armoredShip) {
+	            return variables.CHANCE_ATTACK_AGAIN_ARMOREDSHIP;
+	        } else if (this instanceof ligthHunter) {
+	            return variables.CHANCE_ATTACK_AGAIN_LIGTHHUNTER;
+	        } else if (this instanceof battleShip) {
+	            return variables.CHANCE_ATTACK_AGAIN_BATTLESHIP;   
+	        } else {
+	        	return 0;
+	        }
 	}
 	@Override
 	public void resetArmor() {

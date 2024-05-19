@@ -11,6 +11,23 @@ public class battleShip extends ship{
 		super(armor, baseDamage);
 		
 	}
+	
+	public int getARMOR_BATTLESHIP() {
+		return ARMOR_BATTLESHIP;
+	}
+
+	public int getPLUS_ARMOR_BATTLESHIP_BY_TECHNOLOGY() {
+		return PLUS_ARMOR_BATTLESHIP_BY_TECHNOLOGY;
+	}
+
+	public int getBASE_DAMAGE_BATTLESHIP() {
+		return BASE_DAMAGE_BATTLESHIP;
+	}
+
+	public int getPLUS_ATTACK_BATTLESHIP_BY_TECHNOLOGY() {
+		return PLUS_ATTACK_BATTLESHIP_BY_TECHNOLOGY;
+	}
+
 	public battleShip() {
         this(6000,1000);
     }

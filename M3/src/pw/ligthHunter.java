@@ -11,7 +11,24 @@ public class ligthHunter extends ship{
         
         
     }
-    // Segundo contructor
+	
+    public int getARMOR_LIGTHHUNTER() {
+		return ARMOR_LIGTHHUNTER;
+	}
+
+	public int getPLUS_ARMOR_LIGTHHUNTER_BY_TECHNOLOGY() {
+		return PLUS_ARMOR_LIGTHHUNTER_BY_TECHNOLOGY;
+	}
+
+	public int getBASE_DAMAGE_LIGTHHUNTER() {
+		return BASE_DAMAGE_LIGTHHUNTER;
+	}
+
+	public int getPLUS_ATTACK_LIGHTHUNTER_BY_TECHNOLOGY() {
+		return PLUS_ATTACK_LIGHTHUNTER_BY_TECHNOLOGY;
+	}
+
+	// Segundo contructor
     public ligthHunter() {
         this(400,80);
     }

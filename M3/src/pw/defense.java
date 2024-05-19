@@ -12,22 +12,52 @@ public abstract class defense implements militaryUnit, variables{
 		this.armor = armor;
 		this.baseDamage = baseDamage;
 	}
+	
+	
+	
 
+	public int getArmor() {
+		return armor;
+	}
+
+
+	public void setArmor(int armor) {
+		this.armor = armor;
+	}
+
+
+	public int getInitialArmor() {
+		return initialArmor;
+	}
+
+
+	public void setInitialArmor(int initialArmor) {
+		this.initialArmor = initialArmor;
+	}
+
+	public int getBaseDamage() {
+		return baseDamage;
+	}
+
+
+	public void setBaseDamage(int baseDamage) {
+		this.baseDamage = baseDamage;
+	}
+/******************************************************************************************/
 	@Override
 	public int attack() {
-		// TODO Auto-generated method stub
-		return baseDamage;
+		return this.baseDamage;
 	}
 
 	@Override
 	public void takeDamage(int receivedDamage) {
-		// TODO Auto-generated method stub
+		armor -= receivedDamage;
 		
 	}
 
 	@Override
 	public int getActualArmor() {
-		return armor;
+		return this.armor;
 	}
 
 	@Override
@@ -62,19 +92,37 @@ public abstract class defense implements militaryUnit, variables{
 
 	@Override
 	public int getChanceGeneratingWaste() {
+		 if (this instanceof missileLauncher) {
+	            return variables.CHANCE_GENERATNG_WASTE_MISSILELAUNCHER;
+	        } else if (this instanceof ionCannon) {
+	            return variables.CHANCE_GENERATNG_WASTE_IONCANNON;
+	        } else if (this instanceof plasmaCannon) {
+	            return variables.CHANCE_GENERATNG_WASTE_PLASMACANNON;
+	        } else {
+	        	return 0;
+	        }
+	       
+		}
 		
-		return 0;
-	}
 
 	@Override
 	public int getChanceAttackAgain() {
+		 if (this instanceof missileLauncher) {
+	            return variables.CHANCE_ATTACK_AGAIN_MISSILELAUNCHER;
+	        } else if (this instanceof ionCannon) {
+	            return variables.CHANCE_ATTACK_AGAIN_IONCANNON;
+	        } else if (this instanceof plasmaCannon) {
+	            return variables.CHANCE_ATTACK_AGAIN_PLASMACANNON;
+	        } else {
+	        	return 0;
+	        }
+	    
 		
-		return 0;
 	}
 
 	@Override
 	public void resetArmor() {
-		armor = initialArmor;
+		this.armor = this.initialArmor;
 		
 	}
 

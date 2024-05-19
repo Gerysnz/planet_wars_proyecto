@@ -11,7 +11,24 @@ public class heavyHunter extends ship{
 		super(armor, baseDamage);
 		
 	}
-	 // Segundo contructor
+	
+	 public int getARMOR_HEAVYHUNTER() {
+		return ARMOR_HEAVYHUNTER;
+	}
+
+	public int getPLUS_ARMOR_HEAVYHUNTER_BY_TECHNOLOGY() {
+		return PLUS_ARMOR_HEAVYHUNTER_BY_TECHNOLOGY;
+	}
+
+	public int getBASE_DAMAGE_HEAVYHUNTER() {
+		return BASE_DAMAGE_HEAVYHUNTER;
+	}
+
+	public int getPLUS_ATTACK_HEAVYHUNTER_BY_TECHNOLOGY() {
+		return PLUS_ATTACK_HEAVYHUNTER_BY_TECHNOLOGY;
+	}
+
+	// Segundo contructor
     public heavyHunter() {
         this(1000,150);
     }

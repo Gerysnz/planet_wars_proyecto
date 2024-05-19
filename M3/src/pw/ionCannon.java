@@ -10,6 +10,23 @@ public class ionCannon extends defense{
 		super(armor, baseDamage);
 		
 	}
+	
+	public int getARMOR_IONCANNON() {
+		return ARMOR_IONCANNON;
+	}
+
+	public int getPLUS_ARMOR_IONCANNON_BY_TECHNOLOGY() {
+		return PLUS_ARMOR_IONCANNON_BY_TECHNOLOGY;
+	}
+
+	public int getBASE_DAMAGE_IONCANNON() {
+		return BASE_DAMAGE_IONCANNON;
+	}
+
+	public int getPLUS_ATTACK_IONCANNON_BY_TECHNOLOGY() {
+		return PLUS_ATTACK_IONCANNON_BY_TECHNOLOGY;
+	}
+
 	public ionCannon() {
         this(1200,250);
     }

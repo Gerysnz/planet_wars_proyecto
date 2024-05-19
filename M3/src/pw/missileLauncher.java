@@ -11,6 +11,18 @@ public class missileLauncher extends defense{
 		super(armor, baseDamage);
 		
 	}
+	public int getARMOR_MISSILELAUNCHER() {
+		return ARMOR_MISSILELAUNCHER;
+	}
+	public int getPLUS_ARMOR_MISSILELAUNCHER_BY_TECHNOLOGY() {
+		return PLUS_ARMOR_MISSILELAUNCHER_BY_TECHNOLOGY;
+	}
+	public int getBASE_DAMAGE_MISSILELAUNCHER() {
+		return BASE_DAMAGE_MISSILELAUNCHER;
+	}
+	public int getPLUS_ATTACK_MISSILELAUNCHER_BY_TECHNOLOGY() {
+		return PLUS_ATTACK_MISSILELAUNCHER_BY_TECHNOLOGY;
+	}
 	public missileLauncher() {
         this(200,150);
     }
