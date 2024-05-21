@@ -226,7 +226,26 @@ public class planet implements variables{
     }
 
     public void printStats() {
+            String datos = String.format("Planet Stats:\n\n" +
+                    "TECHNOLOGY\n\n" +
+                    "Atack Technology:       %d\n" +
+                    "Defense Technology:     %d\n\n" +
+                    "DEFENSES\n\n" +
+                    "Missile Launcher:       \n" +
+                    "Ion Cannon:             \n" +
+                    "Plasma Cannon:          \n\n" +
+                    "FLEET\n\n" +
+                    "Light Hunter:           \n" +
+                    "Heavy Hunter:           \n" +
+                    "Battle Ship:            \n" +
+                    "Armored Ship:           \n\n" +
+                    "RESOURCES\n\n" +
+                    "Metal:                  %d\n" +
+                    "Deuterium:              %d\n",
+                    technologyAtack, technologyDefense, metal, deuterium);
+            System.out.println(datos);
+        }
 
     }
 
-}
+
