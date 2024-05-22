@@ -13,6 +13,7 @@ header {
   position: sticky;
   width: auto;
   top: 0%;
+  z-index: 1;
 }
 
 /* AJUSTES BARRA DE NAVEGACIÓN */
@@ -147,27 +148,40 @@ main {
   padding: 2%;
 }
 
-/* FONT TITULO INICIAL */
+/* TITULO  PRINCIPAL */
 .titulo-inicial {
   font-family: "Press Start 2P", system-ui;
   font-weight: 300;
   font-style: normal;
-  font-size: 6em;
-  text-align: center;
+  font-size: 4em;
   padding-bottom: 4%;
   color: #fff;
-  padding-top: 10px;
-  padding: 2%;
+  text-align: center;
 }
 
-/* SECCIÓN IMG  IZQUIERDA */
+
+/* SECCIÓN IMG IZQUIERDA */
 .container-izquierda {
   display: flex;
   justify-content: center;
   max-width: 1000px;
   margin: 0 auto;
   z-index: -1;
-  padding-top: 5%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.container-izquierda .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container-izquierda .image {
+  flex: 1;
+  padding: 10px;
+  text-align: right;
 }
 
 .container-izquierda img {
@@ -175,31 +189,31 @@ main {
   height: auto;
 }
 
-.container-izquierda .content {
-  display: flex;
-  flex-direction: row;
-}
-
 .container-izquierda .text {
-  flex: 1;
-  padding: 20px;
+  flex: 2;
+  padding: 10px;
   color: #fff;
   text-align: justify;
+  margin-left: 10px;
 }
 
-.container-izquierda .image {
-  padding: 20px;
-}
+
 
 /* SECCIÓN IMG DERECHA */
 .section-derecha {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1000px;
+  height: 300px;
+  color: #ffffff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  z-index: -1;
+  padding: 20px;
   display: flex;
   justify-content: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  z-index: -1;
-  padding-top: 5%;
-  color: #ffffff;
+  align-items: center; /* Alinea verticalmente los elementos */
 }
 
 .section-derecha .text, 
@@ -211,11 +225,11 @@ main {
 
 .section-derecha .image {
   text-align: right;
-  padding: 20px;
+  margin-left: 10px; /* Ajusta el margen izquierdo para reducir el espacio entre el texto y la imagen */
 }
 
-/* SECCIÓN INICIAL */
-.section-container {
+/* sección inicial */
+.section-inicial {
   position: relative;
   margin: 0 auto;
   max-width: 900px;
@@ -227,6 +241,9 @@ main {
   padding-top: 2px;
   padding-bottom: 1px;
 }
+
+
+
 
 /* aliniación de botones */
 .alinear-botones {
@@ -407,6 +424,8 @@ strong {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 }
+
+
 
 /* PIE DE PAG */
 footer {
