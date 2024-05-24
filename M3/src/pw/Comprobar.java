@@ -6,14 +6,14 @@ public class Comprobar {
 	 public int comprobarNumero() {
 	     Scanner sc = new Scanner(System.in);
 	     int opcion = 99;
-	     String mierda = "";
+	     String espacio = "";
 	     if (!sc.hasNextInt()) {
 	         System.out.println("No has metido un número");
 	         sc.nextLine();
 	     } else {
 	         opcion = sc.nextInt();
-	         mierda = sc.nextLine();
-	         if (!mierda.equals("")) {
+	         espacio = sc.nextLine();
+	         if (!espacio.equals("")) {
 	             System.out.println("Solo mete un número");
 	         }
 	     }

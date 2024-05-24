@@ -3,28 +3,28 @@ package pw;
 import java.util.ArrayList;
 
 public class planet implements variables{
-	int technologyDefense;
-	int technologyAtack;
-	int metal;
-	int deuterium;
-	int upgradeDefenseTechnologyDeuteriumCost;
-	int upgradeAttackTechnologyDeuteriumCost;
+	private int technologyDefense;
+	private int technologyAtack;
+	private int metal; 
+	private int deuterium;
+	private int upgradeDefenseTechnologyDeuteriumCost;
+	private int upgradeAttackTechnologyDeuteriumCost;
 	ArrayList<militaryUnit>[] army = new ArrayList[7];
 	
-	public planet(int technologyDefense, int technologyAtack, int metal, int deuterium,
-			int upgradeDefenseTechnologyDeuteriumCost, int upgradeAttackTechnologyDeuteriumCost,
-			ArrayList<militaryUnit>[] army) {
-		super();
-		this.technologyDefense = technologyDefense;
-		this.technologyAtack = technologyAtack;
-		this.metal = metal;
-		this.deuterium = deuterium;
-		this.upgradeDefenseTechnologyDeuteriumCost = upgradeDefenseTechnologyDeuteriumCost;
-		this.upgradeAttackTechnologyDeuteriumCost = upgradeAttackTechnologyDeuteriumCost;
-		this.army = army;
-	}
+	
 		
-		public planet() {
+	public planet(int technologyDefense, int technologyAtack, int metal, int deuterium,
+		int upgradeDefenseTechnologyDeuteriumCost, int upgradeAttackTechnologyDeuteriumCost) {
+	super();
+	this.technologyDefense = technologyDefense;
+	this.technologyAtack = technologyAtack;
+	this.metal = metal;
+	this.deuterium = deuterium;
+	this.upgradeDefenseTechnologyDeuteriumCost = upgradeDefenseTechnologyDeuteriumCost;
+	this.upgradeAttackTechnologyDeuteriumCost = upgradeAttackTechnologyDeuteriumCost;
+}
+
+	public planet() {
 		for (int i = 0; i < 7; i++) {
             this.army[i] = new ArrayList<militaryUnit>();
         }
@@ -88,28 +88,31 @@ public class planet implements variables{
 	
 /**********************************************************************************************************/
 	
-	public void upgradeTechnologyDefense() throws resourceException {
-		int currentCost = upgradeDefenseTechnologyDeuteriumCost;
-		if (deuterium >= currentCost) {
-			technologyDefense++;
-			deuterium -= currentCost;
-			upgradeDefenseTechnologyDeuteriumCost *= 1.5; 
-	    } else {
-	        throw new resourceException("No hay suficiente deuterio para actualizar la tecnología de defensa");
-	    }
+	public void upgradeTechnologyDefense()  {
+		try {
+            if (deuterium >= upgradeDefenseTechnologyDeuteriumCost) {
+                technologyDefense++;
+                deuterium -= upgradeDefenseTechnologyDeuteriumCost;
+                upgradeDefenseTechnologyDeuteriumCost *= 1.1;
+            } else {
+                throw new resourceException("Deuterium insuficiente para actualizar la tecnologia de defensa.");
+            }
+        }catch (resourceException e) {
+            System.out.println(e.getMessage());
+        }
 	}
-		
-    
-
-    public void upgradeTechnologyAttack() throws resourceException {
-        int currentCost = upgradeAttackTechnologyDeuteriumCost;
-        if (deuterium >= currentCost) {
-            technologyAtack++;
-            deuterium -= currentCost;
-            // Aumentar el costo para la próxima actualización
-            upgradeAttackTechnologyDeuteriumCost *= 1.5; // Incremento del 10%
-        } else {
-            throw new resourceException("No hay suficiente deuterio para actualizar la tecnología de ataque");
+	
+    public void upgradeTechnologyAttack()  {
+    	try {
+            if (deuterium >= upgradeAttackTechnologyDeuteriumCost) {
+                technologyAtack++;
+                deuterium -= upgradeAttackTechnologyDeuteriumCost;
+                upgradeAttackTechnologyDeuteriumCost *= 1.1;
+            } else {
+                throw new resourceException("Deuterium insuficiente para actualizar la tecnologia de defensa.");
+            }
+        }catch (resourceException e) {
+            System.out.println(e.getMessage());
         }
     }
 
@@ -295,7 +298,8 @@ public class planet implements variables{
                 "RESOURCES\n\n" +
                 "Metal:          %d\n" +
                 "Deuterium:      %d\n",
-                technologyAtack, technologyDefense,army[4].size(),army[5].size(),army[6].size(),army[0].size(),army[1].size(),army[2].size(),army[3].size(), metal, deuterium);
+                technologyAtack, technologyDefense,army[4].size(),army[5].size(),army[6].size(),
+                army[0].size(),army[1].size(),army[2].size(),army[3].size(), metal, deuterium);
         System.out.println(datos);
     }
 

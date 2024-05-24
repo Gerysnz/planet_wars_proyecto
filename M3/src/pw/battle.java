@@ -19,6 +19,14 @@ public class battle {
 	    private int[] actualNumberUnitsEnemy;
 	    
 	    
+	    public String getBattleReport(int battles) {
+	        return battleDevelopment;
+	    }
+
+	    public String getBattleDevelopment() {
+	        return battleDevelopment;
+	    }
+	    
 	    public void initInitialArmies() {
 	        for (int i = 0; i < 2; i++) {
 	            for (int j = 0; j < 7; j++) {
@@ -61,7 +69,27 @@ public class battle {
 
 	        return new int[] { totalMetalCost, totalDeuteriumCost };
 	    }
+	    public int remainderPercentageFleet(ArrayList<militaryUnit>[] army) {
+	        return 0;
+	    }
+
+	    public int getGroupDefender(ArrayList<militaryUnit>[] army) {
+	        return 0;
+	    }
+
+	    public int getPlanetGroupAttacker() {
+	        return 0;
+	    }
+
+	    public int  getEnemyGroupAttacker() {
+	        return 0;
+	    }
+
+	    public void resetArmyArmor() {
+
+	    }
+	}
+
 	
 
-}
 
