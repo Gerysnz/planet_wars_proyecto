@@ -5,16 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Planet Wars </title>
     <link rel="stylesheet" href="inicio.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="imgs/logo_planet.png" type="image/x-icon">
-</head>
-<body>
-    <!-- VIDEO DE FONDO -->
-    <video autoplay muted loop id="background-video">
-        <source src="imgs/VIDEO1.mp4" type="video/mp4">
-    </video>
+    <link rel="icon" href="imgs/log2_pagina.png" type="image/x-icon">
     <!-- BARRA NAVEGACIÓN -->
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">             
@@ -32,7 +27,7 @@
                         <a class="opcionesMENU" href="tutorial.html"> Tutorial </a>
                     </li>
                     <li class="nav-item">
-                        <a  class="opcionesMENU" href="#"> Merchandising </a>
+                        <a  class="opcionesMENU" href="merchandising.html"> Merchandising </a>
                     </li>
                     <li class="nav-item">
                         <a class="opcionesMENU" href="aboutUs.html"> About Us </a>
@@ -47,6 +42,13 @@
             </a>            
         </nav>
     </header>
+</head>
+<body>
+    <!-- VIDEO DE FONDO -->
+    <video autoplay muted loop id="background-video">
+        <source src="imgs/VIDEO1.mp4" type="video/mp4">
+    </video>
+
     <!-- CUERPO -->
     <main>
         <!-- TITULO INICIAL -->
@@ -62,12 +64,45 @@
                 Cada jugador representa un gobernante planetario, encargado de gestionar sus recursos, desarrollar tecnologías y fortalecer sus defensas mientras navega por un cosmos lleno de peligros.
                 En este vasto universo, se encuentran otros planetas cuyos gobernantes tienen la intención de conquistar y saquear.
                 La estrategia, la diplomacia y la táctica son esenciales para defender nuestro planeta y expandir nuestro imperio galáctico.</p>
-        </section>
-        
-        
-        <!-- SECCIÓN IMAGENES -->
+        </section><br>
 
+        <!-- SECCIÓN IMAGENES -->
+        <div class="slider">
+            <div class="list">
+                <div class="item">
+                    <img src="imgs/log2_pagina.png">
+                </div>
+                <div class="item">
+                    <img src="imgs/log2_pagina.png">
+                </div>
+                <div class="item">
+                    <img src="imgs/idea1.png">
+                </div>
+                <div class="item">
+                    <img src="imgs/idea1.png">
+                </div>
+                <div class="item">
+                    <img src="imgs/idea1.png">
+                </div>
+            </div>
+            <!-- button carrousel-->
+            <div class="buttons">
+                <button id="prev"> < </button>
+                <button id="next"> > </button>
+            </div>
+            <!--  -->
+            <ul class="dots">
+                <li class="active"></li>
+                <li class="active"></li>
+                <li class="active"></li>
+                <li class="active"></li>
+                <li class="active"></li>
+            </ul>
+        </div>
     </main>
+
+    <!-- SCRIPT CARROUSEL -->
+    <script src="carrousel.js"> </script>
 
     <!-- PIE DE PÁGINA -->
     <footer> ©Copyright </footer>
