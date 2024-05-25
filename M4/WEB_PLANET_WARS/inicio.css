@@ -37,6 +37,8 @@ header {
   position: sticky;
   width: auto;
   top: 0%;
+  border-bottom: 1px solid #ffffff; 
+  border-radius: 2%;
 }
 
 /* SECCIÓN INICIAL */
@@ -61,6 +63,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 15px;
+
 }
 
 .navbar-brand {
@@ -187,6 +190,7 @@ header {
   margin: auto;
   position: relative;
   overflow: hidden;
+  padding-bottom: 2%;
 }
 
 .list {
@@ -260,12 +264,12 @@ header {
 
 
 /* Visibilidad de texto alternativo en dispositivos pequeños */
-@media (max-width: 767px) {
+@media (max-width: 6000px) {
   .carousel-caption {
       display: none;
   }
-}
 
+}
 /* PIE DE PAG */
 footer {
   background-color: #000000;

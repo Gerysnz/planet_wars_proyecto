@@ -12,8 +12,10 @@ header {
   background-color: #000000;
   position: sticky;
   width: auto;
-  top: 0%;
-  z-index: 1;
+  top: 0;
+  border-bottom: 1px solid #ffffff; 
+  border-radius: 2%;
+  z-index: 3;
 }
 
 /* AJUSTES BARRA DE NAVEGACIÓN */
