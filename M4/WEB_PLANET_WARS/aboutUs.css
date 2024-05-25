@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400&display=swap');
+
 /* Estilos generales */
 body {
   background-image: url(imgs/fondoestrellado.jpg);
@@ -21,17 +23,44 @@ header {
 /* FONT TITULO INICIAL */
 .titulo-inicial {
   font-family: "Press Start 2P", system-ui;
-  font-weight: 50;
-  font-style: normal;
-  font-size: 4em;
+  font-weight: 10;
+  font-size: 7em;
   text-align: center;
-  padding-bottom: 2%;
+  padding-bottom: 0;
   color: #fff;
   padding-top: 9px;
   padding: 2%;
 }
 
-  
+.play-regular {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.play-bold {
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* SECCIÓN INICIAL */
+.section-inicial {
+  position: relative;
+  margin: 0 auto;
+  color: #ffffff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 1px;
+  z-index: -1;
+  padding-top: 0;
+  font-family: "Play", sans-serif;
+  font-size: 2em;
+  font-style: normal;
+}
+
+
 /* AJUSTES BARRA DE NAVEGACIÓN */
 .navbar {
   background-color: #000000;
@@ -164,13 +193,14 @@ main {
 }
 
 
+
 /* aliniación de botones */
 .alinear-tarjetas {
   display: flex;
   justify-content: center;
   gap: 100px;
   padding-bottom: 5%;
-  padding-top: 0;
+  padding-top: 3%;
 }
 
 
@@ -222,7 +252,7 @@ section{
 /* PIE DE PAG */
 footer {
   background-color: #000000;
-  color: #ffffff; /* Cambia el color del texto a blanco */
-  padding: 20px; /* Añade un espacio alrededor del contenido del footer */
+  color: #ffffff; 
+  padding: 20px;
   text-align: center;
 }
