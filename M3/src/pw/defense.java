@@ -121,6 +121,14 @@ public abstract class defense implements militaryUnit, variables{
 	}
 
 	@Override
+	public String toString() {
+		return "defense [armor=" + armor + ", initialArmor=" + initialArmor + ", baseDamage=" + baseDamage + "]";
+	}
+
+
+
+
+	@Override
 	public void resetArmor() {
 		this.armor = this.initialArmor;
 		

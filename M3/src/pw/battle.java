@@ -19,7 +19,25 @@ public class battle implements variables{
 	    private int[] actualNumberUnitsEnemy;
 	    
 	    
-	    public ArrayList<militaryUnit>[] getPlanetArmy() {
+	    
+	    
+	    public battle() {
+			super();
+			this.planetArmy = new ArrayList[7];
+	        this.enemyArmy = new ArrayList[4];
+	        this.armies = new ArrayList[2][7];
+	        this.initialCostFleet = new int[2][2];
+	        this.wasteMetalDeuterium = new int[2];
+	        this.enemyDrops = new int[7];
+	        this.planetDrops = new int[7];
+	        this.resourcesLooses = new int[2][3];
+	        this.initialArmies = new int[2][7];
+	        this.actualNumberUnitsPlanet = new int[7];
+	        this.actualNumberUnitsEnemy = new int[4];
+			
+		}
+
+		public ArrayList<militaryUnit>[] getPlanetArmy() {
 			return planetArmy;
 		}
 
@@ -200,6 +218,7 @@ public class battle implements variables{
 
 	  
 	    public int remainderPercentageFleet(ArrayList<militaryUnit>[] army) {
+	    	System.out.println("remainderdeloscojones");
 	    	 int flotaActual = 0;
 	    	 int resultado = 0;
 	    	 for (int i = 0; i < army.length; i++) {
@@ -220,47 +239,137 @@ public class battle implements variables{
 	    		 
 	 	   
 	    public int getGroupDefender(ArrayList<militaryUnit>[] army) {
-	        // Paso 1: Calcular el total de unidades
+	       
 	        int totalUnits = 0;
 	        int calculo = 0;
 	        int totalprobabilidad = 0;
-	        boolean  salir = false;
+	        int randomNumber = 0;
+	        int comprobarPorcentages = 0;
+	        boolean salir = false;
 	        ArrayList groupProbabilidades = new ArrayList();
+	        System.out.println("Mierda de array de probabilidades");
 
 	    
 	        for (int i = 0; i < army.length; i++) {
-	        	if (army[i] != null)
+	        	if (army[i] != null) {
 	            totalUnits += army[i].size();
-	            
+	            System.out.println("totalunidades for");
+	        }
+	        	
+	        	}
+	        if (totalUnits== 0) {
+	            totalUnits = 1;
 	        }
 	        for (int i = 0; i < army.length; i++) {
-	        	 calculo = (army[i].size() * 100) / totalUnits;
+	        	if(army[i] != null) {
+	                calculo = army[i].size()*100;
+	            }
+	            calculo = calculo/totalUnits;
 	        	 groupProbabilidades.add(calculo);
 	        	 totalprobabilidad += calculo;
 	        }
-	        /*while
-			num random
-			entra al for
-			meto los numeros en variable
-			compruebo*/
-
-	     
-	         return 0;
+	        System.out.println("Mierdaseca group defender");
+	        
+	        	
+	        while (true) {
+	            randomNumber = (int)Math.random() * totalprobabilidad;
+	            for (int i = 0; i < groupProbabilidades.size(); i++) {
+	                comprobarPorcentages += (int) groupProbabilidades.get(i);
+	                if (comprobarPorcentages >= randomNumber) {
+	                	System.out.println("despues del while de mierda");
+	                    return i;
+	                    
+	                }
+	            }
+	            
+	        }
+	            
+	        
+	       
 	    }
 	    
 
 	    public int getPlanetGroupAttacker() {
-	        return 0;
+	    	int totalUnits  = 0;
+	    	int randomNumber = 0;
+	    	int comprobarPorcentages = 0;
+	    	int selected = 0;
+	    	boolean salir = false;
+	    	boolean selecionada = false;
+	    	 for (int i = 0; i < CHANCE_ATTACK_PLANET_UNITS.length; i++) {
+		            totalUnits += CHANCE_ATTACK_PLANET_UNITS[i];
+		             }
+	    
+	        while (!salir) {
+	        	selecionada = false;
+	            randomNumber = (int)Math.random() * totalUnits;
+	            for (int i = 0; i <   CHANCE_ATTACK_PLANET_UNITS.length; i++) {
+	                comprobarPorcentages += (int)  CHANCE_ATTACK_PLANET_UNITS[i];
+	                System.out.println("Mierda");
+	                if (comprobarPorcentages >= randomNumber & !selecionada  & armies[0][i].size() > 0) {
+	                	System.out.println("Mierdaw2");
+	                	System.out.println(i + "Jose");
+	                	salir = true;
+	                	selecionada = true;
+	                    selected = i;
+	                    
+                }
+	                }
+	            }
+	        return selected;
+	        
+	    	 
 	    }
 
 	    public int  getEnemyGroupAttacker() {
-	        return 0;
+	    	int totalUnits  = 0;
+	    	int randomNumber = 0;
+	    	int comprobarPorcentages = 0;
+	    	int selected = 0;
+	    	boolean salir = false;
+	    	boolean selecionada = false;
+	    	 for (int i = 0; i < CHANCE_ATTACK_ENEMY_UNITS.length; i++) {
+		            totalUnits += CHANCE_ATTACK_ENEMY_UNITS[i];
+		            System.out.println("CHANCEATTACK geteenemy");
+		             }
+	    
+	        while (!salir) {
+	        	selecionada = false;
+	            randomNumber = (int)(Math.random() * totalUnits);
+	            for (int i = 0; i <   CHANCE_ATTACK_ENEMY_UNITS.length; i++) {
+	                comprobarPorcentages += (int)  CHANCE_ATTACK_ENEMY_UNITS[i];
+	                System.out.println("antes del if de mierda");
+	                if (comprobarPorcentages >= randomNumber & !selecionada ) {
+	                	System.out.println("despues del if de mierda");
+	                	System.out.println(i + "paco");
+	                	
+	                	salir = true;
+	                	selecionada = true;
+	                    selected = i;
+	                    
+	                    
+                }
+            }
+	            }
+	        
+	        	 return selected;
 	    }
 
 	    public void resetArmyArmor() {
 
 	    }
-	}
+	    public void iniciarArmies() {
+	        for (int i = 0;i<this.armies.length;i++) {
+	            if (i == 0) {
+	                armies[i] = this.planetArmy.clone();
+	            }
+	            else {
+	                armies[i] = this.enemyArmy.clone();
+	            }
+	        }
+	    }
+}
+
 
 	
 

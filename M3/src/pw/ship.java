@@ -105,6 +105,10 @@ public abstract class ship implements militaryUnit, variables{
 		armor = initialArmor;
 		
 	}
+	@Override
+	public String toString() {
+		return "ship [armor=" + armor + ", initialArmor=" + initialArmor + ", baseDamage=" + baseDamage + "]";
+	}
 	
 
 }
