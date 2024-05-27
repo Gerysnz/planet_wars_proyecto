@@ -163,7 +163,7 @@ main {
   text-align: center;
 }
 
-/* ESTILO PRINCIPAL */
+/* FUENTE PRINCIPAL */
 .play-regular {
   font-family: "Play", sans-serif;
   font-weight: 400;
@@ -175,7 +175,6 @@ main {
   font-weight: 700;
   font-style: normal;
 }
-
 
 /* SECCION INICIAAL */
 .section-container {
@@ -195,6 +194,7 @@ main {
   font-size: 30px;
 }
 
+/* SECCIÓN DE INFORMACIÓN */
 .container-izquierda {
   position: relative;
   display: flex;
@@ -238,9 +238,8 @@ main {
 
 .image img {
   max-width: 100%;
-  height: auto;
+  height: 90%;
 }
-
 
 .titulo {
   position: relative;
@@ -453,11 +452,42 @@ strong {
   }
 }
 
-.card {
+/* TARJETA 'SIMULACIÓN CODIGO' */
+.card { /* NORMAL */
   font-family: monospace;
   margin-top: 5px;
   width: 350px;
   height: 330px;
+  background: #31313149;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+}
+
+.card2 { /* ALARGADO VERTICALMENTE */
+  font-family: monospace;
+  margin-top: 5px;
+  width: 350px;
+  height: 550px;
+  background: #31313149;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+}
+
+.card3 { /* ALARGADO VERTICALMENTE */
+  font-family: monospace;
+  margin-top: 5px;
+  width: 350px;
+  height: 620px;
+  background: #31313149;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+}
+
+.card4 { /* ALARGADO HORIZONTALMENTE*/
+  font-family: monospace;
+  margin-top: 5px;
+  width: 450px;
+  height: 270px;
   background: #31313149;
   border: 2px solid #ffffff;
   border-radius: 15px;
@@ -590,6 +620,9 @@ strong {
   transition-delay: 300ms;
 }
 
+@media screen and (max-width: 550px) {
+  .class {background-image: url('imgs/fondo_pag.png');}
+}
 
 
 /* PIE DE PAG */

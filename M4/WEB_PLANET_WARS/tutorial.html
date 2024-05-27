@@ -76,29 +76,12 @@
 
         <!-- BOTONES DIVISORES DE SECCIONES -->
         <div class="alinear-botones">
-            <button class="btn" type="button" onclick="mostrarSeccion('funciones')">
-                <strong> FUNCIONES </strong>
-                <div id="container-stars">
-                    <div id="stars"></div>
-                </div>
-                
-                <div id="glow">
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                </div>
-            </button>
-
             <button class="btn" type="button" onclick="mostrarSeccion('opciones')">
-                <strong> OPCIONES </strong>
+                <strong> GAME OPTIONS </strong>
                 <div id="container-stars">
                     <div id="stars"></div>
                 </div>
-                
-                <div id="glow">
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                </div>
-            </button>
+
                 
             <button class="btn" type="button" onclick="mostrarSeccion('secciones')">
                 <strong> LEARN TO PLAY </strong>
@@ -114,7 +97,7 @@
         </div>
 
         <!-- FUNCIONES -->
-        <section id="seccion-funciones" class="seccion" style="display: none;">
+        <section id="seccion-opciones" class="seccion" style="display: none;">
             <div class="container-izquierda"> <!-- Mejora y Defensa del Planeta -->
                 <div class="content">
                     <div class="text">
@@ -134,7 +117,7 @@
                         </ul>
                     </div>
                     <div class="image">
-                        <img src="imgs/idea1.png" alt="Descripción de la imagen 1">
+                        <img src="img_juego/upgrade2.png" alt="Descripción de la imagen 1">
                     </div>
                 </div>
             </div>
@@ -158,7 +141,7 @@
                         </ul>
                     </div>
                     <div class="image">
-                        <img src="imgs/idea1.png" alt="Descripción de la imagen 1">
+                        <img src="img_juego/buildTroops.png" alt="Descripción de la imagen 1">
                     </div>
                 </div>
             </div>
@@ -182,7 +165,7 @@
                         </ul>
                     </div>
                     <div class="image">
-                        <img src="imgs/idea1.png" alt="Descripción de la imagen 1">
+                        <img src="img_juego/change_attacker.png" alt="Descripción de la imagen 1">
                     </div>
                 </div>
             </div>
@@ -209,7 +192,7 @@
                         </ul>
                     </div>
                     <div class="image">
-                        <img src="imgs/idea1.png" alt="Descripción de la imagen 1">
+                        <img src="img_juego/buildDenfenses.png" alt="Descripción de la imagen 1">
                     </div>
                 </div>
             </div>
@@ -232,7 +215,7 @@
                         </ul>
                     </div>
                     <div class="image">
-                        <img src="imgs/idea1.png" alt="Descripción de la imagen 1">
+                        <img src="img_juego/tecnologio_inicio.png" alt="Descripción de la imagen 1">
                     </div>
                 </div>
             </div>
@@ -255,14 +238,14 @@
                         </ul>
                     </div>
                     <div class="image">
-                        <img src="imgs/idea1.png" alt="Descripción de la imagen 1">
+                        <img src="img_juego/partida2_juego.png" alt="Descripción de la imagen 1">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- OPCIONES -->
-        <section id="seccion-opciones" class="seccion" style="display: none;">
+        <section id="seccion-funciones" class="seccion" style="display: none;">
             <div class="container-izquierda"> <!-- Crear Unidades Militares -->
                 <div class="content">
                     <div class="text">
@@ -306,7 +289,7 @@
                         </ul>
                     </div>
                     <div class="image">
-                        <img src="imgs/idea1.png" alt="Descripción de la imagen 1">
+                        <img src="img_juego/upgrade3.png" alt="Descripción de la imagen 1">
                     </div>
                 </div>
             </div>
@@ -360,6 +343,12 @@
                 <div class="content">
                     <div class="text">
                         <ul>
+                            <li>
+                                To start the game we will click on the play button and the download of
+                                the file containing the game will also start. Once downloaded you will only
+                                have to start it. It is recommended to have an application that supports java
+                                files so you can start them.
+                            </li>
 
                         </ul>
                     </div>
@@ -413,7 +402,166 @@
                         </div>
                     </div>
                 </div>
-            </div>                    
+            </div>
+            
+            <div class="container-izquierda"> <!-- Planet Stats -->
+                <div class="content">
+                    <div class="text">
+                        <h1 class="titulo">Planet Stats</h1>
+                        <ul>
+                            <li> 
+                                In Planet Stats we can observe what we currently have on our planet.
+                            </li> <br>
+
+                            <li> 
+                                Everything can improve as you play and improve technology and acquire 
+                                defenses or troops.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card2">
+                        <div class="top">
+                            <div class="dots">
+                                <div class="dot dot-1"></div>
+                                <div class="dot dot-2"></div>
+                                <div class="dot dot-3"></div>
+                            </div>
+                            <p class="g-color">_&gt;</p>
+                        </div>
+                        <div class="bottom">
+                            <p class="code">
+                                Planet Stats:<br>
+
+                                <br>TECHNOLOGY<br>
+                                
+                                <br>Atack Technology        2<br>
+                                Defense Technology      1<br>
+                                
+                                <br>DEFENSES<br>
+                                
+                                <br>Missile Launcher        0<br>
+                                Ion Cannon              0<br>
+                                Plasma Cannon           0<br>
+                                
+                                <br>FLEET<br>
+                                
+                                <br>Ligth Hunter            0<br>
+                                Heavy Hunter            0<br>
+                                Battle Ship             0<br>
+                                Armored Ship            0<br>
+                                
+                                <br>RESOURCES<br>
+                                
+                                <br>Metal               567000<br>
+                                    Deuterium           163115<br>
+                                
+                                <br>Option >
+                            </p>            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container-izquierda"> <!-- Add troops -->
+                <div class="content">
+                    <div class="text">
+                        <h1 class="titulo">Add troops</h1>
+                        <ul>
+                            <li> 
+                                Following this example a little is what we would get to add some troops,
+                                we see how from the 'Main Menu' we go to 'Build' and there we choose the
+                                option to add troops and we choose the one we want, we add the number of
+                                how many we want and it will jump the message that they are already added.
+ 
+                            </li> <br>
+
+                            <li> 
+                                In the Defense part it is the same dynamic, only with other weapons.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card3">
+                        <div class="top">
+                            <div class="dots">
+                                <div class="dot dot-1"></div>
+                                <div class="dot dot-2"></div>
+                                <div class="dot dot-3"></div>
+                            </div>
+                            <p class="g-color">_&gt;</p>
+                        </div>
+                        <div class="bottom">
+                            <p class="code">
+                                1)View Planet Stats<br>
+                                2)Build<br>
+                                3)Upgrade Technology<br>
+                                4)View Battle Reports<br>
+                                0)Exit<br>
+                                
+                                <br>Option ><br>
+                                2<br>
+                                <br>Build<br>
+                                1)Build troops<br>
+                                2)Build Defenses<br>
+                                3)Go Back<br>
+                                
+                                <br>Option ><br>
+                                1<br>
+                                
+                                <br>Menu Build troops<br>
+                                
+                                1)Build Ligth Hunter<br>
+                                2)Build HeavyHunter<br>
+                                3)Build Battle Ship<br>
+                                4)Build ArmoredShip<br>
+                                5)Go Back<br>
+                                
+                                <br>Option ><br>
+                                2<br>
+                                Amount of Units<br>
+                                Amount: ><br>
+                                3<br>
+                                aded 3 Heavy Hunter<br>
+                            </p>            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container-izquierda"> <!-- Upgrade -->
+                <div class="content">
+                    <div class="text">
+                        <h1 class="titulo">Upgrade</h1>
+                        <ul>
+                            <li> 
+                                Once we have added the weapons we can upgrade and improve our resources.
+                            </li> <br>
+                        </ul>
+                    </div>
+                    <div class="card4">
+                        <div class="top">
+                            <div class="dots">
+                                <div class="dot dot-1"></div>
+                                <div class="dot dot-2"></div>
+                                <div class="dot dot-3"></div>
+                            </div>
+                            <p class="g-color">_&gt;</p>
+                        </div>
+                        <div class="bottom">
+                            <p class="code">
+                                Upgrade Technology<br>
+                                <br>Actual Defense Technology:             1<br>
+                                Actual Attack Technology:              2<br>
+                                
+                                <br>1)Upgrade Defense Technology. Cost: 3200  Deuterium<br>
+                                2)Upgrade Attack Technology.  Cost: 5120  Deuterium<br>
+                                3)Go back<br>
+                                
+                                <br>Deuterium resources = 140465<br>
+                            </p>            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>
