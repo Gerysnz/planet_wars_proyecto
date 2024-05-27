@@ -138,6 +138,10 @@ public class planet implements variables{
         }
         System.out.println("Added "+ addedUnits +" LigthHunters");
     }
+    public void generarResources () {
+    	this.metal += 12500;
+    	this.deuterium += 6500;
+    }
 
     public void newHeavyHunter(int n) {
         int unidad = n;

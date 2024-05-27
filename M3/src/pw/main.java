@@ -1,9 +1,10 @@
 package pw;
 
 import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.Timer;
 
+import java.util.Timer;
+import java.util.TimerTask;
+import pw.*;
 
 public class main implements variables{
 	private planet planeta;
@@ -11,6 +12,14 @@ public class main implements variables{
 	 //createenemyarmy
 	private  int metalEnemigo = METAL_BASE_ENEMY_ARMY;
 	private int deuterioEnemigo = DEUTERIUM_BASE_ENEMY_ARMY;
+	private TimerTask task1;
+    private TimerTask task2;
+    private TimerTask task3;
+    private boolean flg_00 = true;
+    private boolean nosAtacan = false;
+    private String menuMostrar = "";
+    private final String menu00 = "\n1)View Planet Stats\n2)Build\n3)Upgrade Technology\n4)View Battle Reports\n0)Exit";
+    private final String menu05 = "Main Menu\n1)View Planet Stats\n2)Build\n3)Upgrade Technology\n4)View Battle Reports\n5)View Thread Comming\n0)Exit";
     main(){
     	this.planeta = new planet();
     	this.pelea = new battle();
@@ -18,7 +27,7 @@ public class main implements variables{
 
 	public static void main(String[] args) throws resourceException{
 		main programa = new main();
-		programa.getPlaneta();
+		//programa.getPlaneta();
 		
 		planet planet1 = programa.getPlaneta();
 		battle machetazos = programa.getPelea();
@@ -40,41 +49,40 @@ public class main implements variables{
         planet1.newMissileLauncher(1);
         planet1.newIonCannon(1);
         planet1.newPlasmaCannon(1);
-        planet1.newHeavyHunter(1);     
+        planet1.newHeavyHunter(1); 
+        
         Timer timer = new Timer();
+        programa.timers();
+        timer.schedule(programa.task1, 1000,1000);
+        timer.schedule(programa.task2, 180000,180000);
+        timer.schedule(programa.task3, 120000,120000);
+   
         
-       
-        for (int i = 0; i < machetazos.getArmies().length; i++) {
-        	for (int j = 0; j < machetazos.getArmies()[i].length; j++) {
-        		System.out.println(machetazos.getArmies()[i][j]);
-            
-            }
-        }
-        System.out.println("despues de machetazos.setarmy");
-        
-        programa.batalla();
+        //programa.batalla();
         
                
 		Comprobar comprobacion = new Comprobar();
-		final String menu00 = "\n1)View Planet Stats\n2)Build\n3)Upgrade Technology\n4)View Battle Reports\n0)Exit";
+		
 	    final String menu02 = "1)Build troops\n2)Build Defenses\n3)Go Back";
 	    final String menu021 = "1)Build LigthHunter\n2)Build HeavyHunter\n3)Build BattleShip\n4)Build ArmoredShip\n5)Go Back";
 	    final String menu022 = "1)Build Missile Launcher\n2)Build Ion Cannon\n3)Build Plasma Cannon\n4)Go Back";
 	    final String menu03 = "1)Upgrade Defense Technology.\n2)Upgrade Attack Technology.\n3)Go Back";
-	    final String menu05 = "Planet Wars\n1)View Planet Stats\n2)Build\n3)Upgrade Technology\n4)View Battle Reports\n5)View Thread Comming\n0)Exit";
-	   
+	  
+	    programa.setMenuMostrar(programa.menu00);
 		boolean salir = false;
-		ArrayList<militaryUnit>[] armies = new ArrayList[4];
-        for (int i = 0; i < armies.length; i++) {
-            armies[i] = new ArrayList<militaryUnit>();
-        }
+		
+		//ArrayList<militaryUnit>[] armies = new ArrayList[4];
+        //for (int i = 0; i < armies.length; i++) {
+            //armies[i] = new ArrayList<militaryUnit>();
+        //}
         
-        armies[0].add(new ligthHunter());
-        armies[1].add(new heavyHunter());
-        armies[2].add(new battleShip());
-        armies[3].add(new armoredShip());
+        //armies[0].add(new ligthHunter());
+        //armies[1].add(new heavyHunter());
+        //armies[2].add(new battleShip());
+        //armies[3].add(new armoredShip());
+		
         while (!salir) {
-            System.out.println(menu00);
+            System.out.println(programa.menuMostrar);
             System.out.println("Option > ");
             int option = comprobacion.comprobarNumero();
             switch (option) {
@@ -220,6 +228,7 @@ public class main implements variables{
             default:
                 System.out.println("\nInvalid option\n");
 		} 
+          
 
 }
            }
@@ -229,35 +238,35 @@ public class main implements variables{
 	    int recursosDeuterium = deuterioEnemigo;
 	    int[] porcentajesEnemy = {35, 25, 20, 20}; // LigthHunter, HeavyHunter, BattleShip, ArmoredShip
 	    int total = 0;
-	    System.out.println("awfawfaw");
+	   
 	    
 	    ArrayList<militaryUnit>[] enemyArmy = new ArrayList[4];
 	    for (int i= 0; i < enemyArmy.length; i++) {
 	    	enemyArmy[i] = new ArrayList<militaryUnit>();
-	    	System.out.println("despues de arraylist enemyarmy");
+	    	
 	    	
 	    }
 	    
         while (recursosMetal >= METAL_COST_LIGTHHUNTER & recursosDeuterium >= DEUTERIUM_COST_LIGTHHUNTER) {
             int randNum =  (int)(Math.random()*100);
-            System.out.println("metal" + recursosMetal + "deuterio" + recursosDeuterium);
-            System.out.println("dpepepeepepeep");
+            //System.out.println("metal" + recursosMetal + "deuterio" + recursosDeuterium);
+          
             total = 0;
             boolean seleccionado = false;
-            System.out.println(randNum);
+            //System.out.println(randNum);
             for (int i = 0; i < porcentajesEnemy.length; i++) {
             	total += porcentajesEnemy[i];
-            	System.out.println(total);
-            	System.out.println(seleccionado);
+            	//System.out.println(total);
+            	//System.out.println(seleccionado);
             	if(total >= randNum) {
-            		System.out.println("despues del for de porcentajes enemy");
+            		//System.out.println("despues del for de porcentajes enemy");
             	
             	 if (i == 0 & !seleccionado & recursosMetal >= METAL_COST_LIGTHHUNTER & recursosDeuterium >= DEUTERIUM_COST_LIGTHHUNTER) {
                      enemyArmy[0].add(new ligthHunter());
                      recursosMetal -= METAL_COST_LIGTHHUNTER;
                      recursosDeuterium -= DEUTERIUM_COST_LIGTHHUNTER;
                      seleccionado = true;
-                     System.out.println("Ha añadido LigthHunter");
+                     //System.out.println("Ha añadido LigthHunter");
                      
                      
                  } else if (i == 1 &  !seleccionado & recursosMetal >= METAL_COST_HEAVYHUNTER & recursosDeuterium >= DEUTERIUM_COST_HEAVYHUNTER) {
@@ -265,19 +274,19 @@ public class main implements variables{
                      recursosMetal -= METAL_COST_HEAVYHUNTER;
                      recursosDeuterium -= DEUTERIUM_COST_HEAVYHUNTER;
                      seleccionado = true;
-                     System.out.println("Ha añadido HeavyHunter");
+                     //System.out.println("Ha añadido HeavyHunter");
                  } else if ( i == 2 &  !seleccionado &   recursosMetal >= METAL_COST_BATTLESHIP & recursosDeuterium >= DEUTERIUM_COST_BATTLESHIP) {
                      enemyArmy[2].add(new battleShip());
                      recursosMetal -= METAL_COST_BATTLESHIP;
                      recursosDeuterium -= DEUTERIUM_COST_BATTLESHIP;
                      seleccionado = true;
-                     System.out.println("Ha añadido BattleShip");
+                     //System.out.println("Ha añadido BattleShip");
                  } else if ( i == 3 &    !seleccionado &  recursosMetal >= METAL_COST_ARMOREDSHIP & recursosDeuterium >= DEUTERIUM_COST_ARMOREDSHIP) {
                      enemyArmy[3].add(new armoredShip());
                      recursosMetal -= METAL_COST_ARMOREDSHIP;
                      recursosDeuterium -= DEUTERIUM_COST_ARMOREDSHIP;
                      seleccionado = true;
-                     System.out.println("Ha añadido AromredShip");
+                     //System.out.println("Ha añadido AromredShip");
                  } 
             	}
             	}
@@ -288,9 +297,9 @@ public class main implements variables{
         }
         metalEnemigo += 40000;
         deuterioEnemigo += 20000;
-        System.out.println("antes de clon enemyarmy");
+        
         pelea.setEnemyArmy(enemyArmy.clone());
-        System.out.println("despues de clone ");
+        //System.out.println("despues de clone ");
         }
 		
 	
@@ -313,21 +322,21 @@ public class main implements variables{
 			if (numAleatorio %2 == 0) {
 				grupoAtacante = pelea.getEnemyGroupAttacker();
 				cont = 1;
-				System.out.println("despues de crear grupoAtacante cont = 1");
+				
 			}
 			else{
 				grupoAtacante = pelea.getEnemyGroupAttacker();
 				cont = 0;
-				System.out.println("despues de crear grupoAtacante cont = 0");
+				
 				
 			}
 			grupoDefensor = pelea.getGroupDefender(pelea.getArmies()[numAleatorio %2]);
-			System.out.println("PETA ANTES");
+		
 			System.out.println(grupoAtacante + " " + grupoDefensor);
 			System.out.println(numAleatorio%2);
 			System.out.println(cont);
 			atacante = (int)(Math.random()*pelea.getArmies()[cont][grupoAtacante].size());
-			System.out.println("PETA DESPUES");
+			
 			defensor = (int)(Math.random()*pelea.getArmies()[numAleatorio %2][grupoDefensor].size());
 			
 			((militaryUnit) pelea.getArmies()[numAleatorio%2][grupoDefensor].get(defensor)).takeDamage(((militaryUnit) pelea.getArmies()[cont][grupoAtacante].get(atacante)).attack());	
@@ -340,7 +349,7 @@ public class main implements variables{
 					 	if (pelea.remainderPercentageFleet( pelea.getArmies()[numAleatorio%2]) <= 20) {
 					 		
 					 		salir2 = true;
-					 		System.out.println("Has entrado en salir2");
+					 	
 					 		salir = true;
 					 		
 			
@@ -381,6 +390,45 @@ public class main implements variables{
 		
 	 	
 	}
+	public void timers(){
+
+        task1 = new TimerTask() {
+
+             public void run()
+             {
+            	 //System.out.println("funcionaawfawf");
+                 planeta.generarResources();;
+                 
+             }
+             };
+        task2 = new TimerTask() {
+
+             public void run()
+             {
+                 nosAtacan = true;
+                 System.out.println("New Thread is Comming");
+                 menuMostrar = menu05;
+                 createEnemyArmy();
+                 if (flg_00) {
+                     System.out.println(menuMostrar);
+                 }
+             }
+             };
+
+        task3 = new TimerTask() {
+
+             public void run()
+             {
+                 nosAtacan = false;
+                 System.out.println("We have been Atacked");
+                 menuMostrar = menu00;
+                 if (flg_00) {
+                     System.out.println(menuMostrar);
+                 }
+             }
+             
+             };
+    }
 
 
 
@@ -402,4 +450,13 @@ public class main implements variables{
 	public void setPelea(battle pelea) {
 		this.pelea = pelea;
 	}
+
+	public String getMenuMostrar() {
+		return menuMostrar;
+	}
+
+	public void setMenuMostrar(String menuMostrar) {
+		this.menuMostrar = menuMostrar;
+	}
+	
 }
