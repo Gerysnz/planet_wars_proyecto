@@ -483,11 +483,21 @@ strong {
   border-radius: 15px;
 }
 
-.card4 { /* ALARGADO HORIZONTALMENTE*/
+.card4 { /* ALARGADO HORIZONTALMENTE */
   font-family: monospace;
   margin-top: 5px;
   width: 450px;
   height: 270px;
+  background: #31313149;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+}
+
+.card5 { /* ALARGADO HORIZONTALMENTE Y VERTICALMENTE */
+  font-family: monospace;
+  margin-top: 5px;
+  width: 990px;
+  height: 990;
   background: #31313149;
   border: 2px solid #ffffff;
   border-radius: 15px;
