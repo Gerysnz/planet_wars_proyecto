@@ -22,6 +22,9 @@ public class planet implements variables{
 	this.deuterium = deuterium;
 	this.upgradeDefenseTechnologyDeuteriumCost = upgradeDefenseTechnologyDeuteriumCost;
 	this.upgradeAttackTechnologyDeuteriumCost = upgradeAttackTechnologyDeuteriumCost;
+	 for (int i = 0; i < 7; i++) {
+         this.army[i] = new ArrayList<militaryUnit>();
+     }
 }
 
 	public planet() {

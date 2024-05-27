@@ -3,8 +3,9 @@ package pw;
 import java.util.Scanner;
 
 public class Comprobar {
+	private Scanner sc = new Scanner(System.in);
 	 public int comprobarNumero() {
-	     Scanner sc = new Scanner(System.in);
+	     
 	     int opcion = 99;
 	     String espacio = "";
 	     if (!sc.hasNextInt()) {
@@ -20,6 +21,9 @@ public class Comprobar {
 	     return opcion;
 
 
+	 }
+	 public void parar () {
+		 sc.close();
 	 }
 
 	}
