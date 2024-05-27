@@ -13,7 +13,7 @@ public class oraclejava {
    public void conectar(){
        
         String DB_URL = "jdbc:oracle:thin:@localhost:1521:orcl";
-        String USER = "sys as sysdba";
+        String USER = "planetwars";
         String PASS = "planetwars";
         // Creating Connection
         try {
