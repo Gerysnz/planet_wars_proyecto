@@ -6,4 +6,7 @@ M3 - El juego (aplicación) hecho con java.
 M4 - La página web, con todos los html y css y algunos javaScript e imágenes. 
 M5 - Diagrama de clases.
 
-Para ejecutar el juego se descargará el archivo .jar que se encuentra en la web y una vez aquí desde terminal o desde una aplicación compatible con Java.
+Instrucciones para ejecutar el archivo. 
+1r Paso: Desde la página web o desde el Github podemos acceder al ejecutable del juego. (En caso del github vamos a la carpeta de M3 y encontraremos el ejecutable).
+2n Paso: Deberemos descargarlo y despues clickar sobre el archivo descargado. (Depende de que sistema operatibo tengamos se puede iniciar de diferentes formas).
+3r Paso: Una vez descargado desde terminal ajecutaremos el archivo 
