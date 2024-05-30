@@ -290,4 +290,7 @@ background-color: #7e7e7e;
     width: 45%;
     margin: 10px;
 }
+.titulo-inicial {
+  font-size: 1em;
+}
 }

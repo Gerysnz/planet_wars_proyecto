@@ -259,8 +259,12 @@ footer {
 
 /* medios para dispositivos móviles */
 @media (max-width: 768px) {
-  .product {
-      width: 45%;
-      margin: 10px;
+  .card {
+    width: 60%;
+    margin: 100px;
+    height: auto;
   }
+  .titulo-inicial {
+    font-size: 1.9em;
   }
+}
