@@ -215,8 +215,8 @@ section{
   display: grid;
   justify-items: center;
   margin-top: 10px;
-  width: 400px;
-  height: 500px;
+  width: 300px;
+  height: 400px;
   background-color: #fff;
   border-radius: 20px;
   overflow: hidden;
@@ -237,8 +237,8 @@ section{
 
 .card p:nth-child(3){
   color: grey;
-  margin-top: -40px;
-  font-size: 14px;
+  font-size: 13px;
+  margin-top: 5px;
 }
 
 .card p:nth-child(2){
