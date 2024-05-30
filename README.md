@@ -7,6 +7,16 @@ M4 - La página web, con todos los html y css y algunos javaScript e imágenes.
 M5 - Diagrama de clases.
 
 Instrucciones para ejecutar el archivo. 
-1r Paso: Desde la página web o desde el Github podemos acceder al ejecutable del juego. (En caso del github vamos a la carpeta de M3 y encontraremos el ejecutable).
-2n Paso: Deberemos descargarlo y despues clickar sobre el archivo descargado. (Depende de que sistema operatibo tengamos se puede iniciar de diferentes formas).
-3r Paso: Una vez descargado desde terminal ajecutaremos el archivo 
+
+1r Paso: Desde la página web o desde el Github podemos acceder al archivo ejecutable del juego.
+
+2n Paso: Deberemos descargarlo.
+
+3r Paso: Una vez descargado en nuestro ordenador, con la terminal deberemos colocarnos en la carpeta donde lo hayamos descargado y ejecutar este comando:
+- En caso de ser Linux: sudo java -jar PlanetWars.jar.
+- java -jar PlanetWars.jar
+
+En caso que no sepas acceder desde terminal te pongo una ruta basica de donde esta el archivo 
+<< cd Descargas/ >>
+
+
