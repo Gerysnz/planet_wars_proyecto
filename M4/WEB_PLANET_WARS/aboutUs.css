@@ -238,7 +238,7 @@ section{
 .card p:nth-child(3){
   color: grey;
   margin-top: -40px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .card p:nth-child(2){
@@ -256,3 +256,11 @@ footer {
   padding: 20px;
   text-align: center;
 }
+
+/* medios para dispositivos móviles */
+@media (max-width: 768px) {
+  .product {
+      width: 45%;
+      margin: 10px;
+  }
+  }

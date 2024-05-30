@@ -320,9 +320,13 @@ header {
 
 
 /* Visibilidad de texto alternativo en dispositivos pequeños */
-@media (max-width: 6000px) {
+@media (max-width: 768px) {
   .carousel-caption {
       display: none;
+  }
+
+  .titulo-inicial {
+    font-size: 2em;
   }
 
 }

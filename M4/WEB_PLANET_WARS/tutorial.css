@@ -630,8 +630,13 @@ strong {
   transition-delay: 300ms;
 }
 
-@media screen and (max-width: 550px) {
-  .class {background-image: url('imgs/fondo_pag.png');}
+@media (max-width: 768px) {
+  .card, .card2, .card3, .card4, .card5 {
+      display: none;
+  }
+  .titulo-inicial {
+    font-size: 1em;
+  }
 }
 
 
